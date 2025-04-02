@@ -1,5 +1,5 @@
-// import React from 'react';
-import * as React from 'react';
+'use client';
+import React from 'react';
 
 import {
   Select,
@@ -9,20 +9,36 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { SelectPortal } from '@radix-ui/react-select';
+import { useRouter, usePathname } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
 
 function SelectLanguage() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const currentLocale = useLocale();
+
+  const switchLanguage = (newLocale: string) => {
+    if (newLocale === currentLocale) return;
+
+    const path = pathname.split('/').slice(2).join('/');
+    router.push(`/${newLocale}/${path}`);
+  };
   return (
-    <Select>
+    <Select onValueChange={switchLanguage}>
       <SelectTrigger>
-        <SelectValue placeholder="En" />
+        <SelectValue placeholder={currentLocale} />
       </SelectTrigger>
       <SelectPortal>
         <SelectContent
           position="popper"
           className="dropdown-content-width-fullelectContent bg-main"
         >
-          <SelectItem value="Uk">Uk</SelectItem>
-          <SelectItem value="En">En</SelectItem>
+          {routing.locales.map((selectItem) => (
+            <SelectItem key={selectItem} value={selectItem}>
+              {selectItem}
+            </SelectItem>
+          ))}
         </SelectContent>
       </SelectPortal>
     </Select>

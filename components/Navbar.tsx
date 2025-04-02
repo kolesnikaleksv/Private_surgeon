@@ -1,6 +1,6 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { Button } from './ui/button';
 import SelectLanguage from './SelectLanguage';
 import { Prosto_One } from 'next/font/google';
@@ -24,8 +24,8 @@ function Navbar() {
           />
         </Link>
         <nav className="flex flex-row gap-5 text-sm">
-          <Link href={'./'}>Home</Link>
-          <Link href={'./about'}>About</Link>
+          <Link href={`./`}>Home</Link>
+          <Link href={`./about`}>About</Link>
           <Link href={'./prices'}>Prices</Link>
           <Link href={'./contacts'}>Contacts</Link>
           <Link href={'./portpholio'}>Porthpolio</Link>
