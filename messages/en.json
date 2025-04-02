@@ -1,6 +1,16 @@
 {
+  "NavbarLinks": {
+    "home": "Home",
+    "about": "About",
+    "prices": "Prices",
+    "contacts": "Contacts",
+    "portfolio": "Portfolio"
+  },
+  "Header": {
+    "button": "Order consultation"
+  },
   "HomePage": {
     "title": "Hello world!",
-    "about": "Привіт, як справи?"
+    "about": "What about our company?"
   }
 }

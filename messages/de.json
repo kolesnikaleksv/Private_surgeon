@@ -1,6 +1,16 @@
 {
+  "NavbarLinks": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "prices": "Preise",
+    "contacts": "Kontakte",
+    "portfolio": "Portfolio"
+  },
+  "Header": {
+    "button": "Beratung buchen"
+  },
   "HomePage": {
-    "title": "Hello world Deutsch!",
-    "about": "Go to the about page in Deutsch"
+    "title": "Hallo Welt!",
+    "about": "Was sollten Sie über unser Unternehmen wissen?"
   }
 }

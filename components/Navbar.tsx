@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 import SelectLanguage from './SelectLanguage';
 import { Prosto_One } from 'next/font/google';
+import { useTranslations } from 'next-intl';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -12,6 +13,9 @@ const prosto_one = Prosto_One({
 });
 
 function Navbar() {
+  const t = useTranslations('NavbarLinks');
+  const h = useTranslations('Header');
+
   return (
     <header className="p-5 w-full flex justify-between items-center bg-main">
       <div className="header-left flex flex-row items-center gap-6">
@@ -24,11 +28,11 @@ function Navbar() {
           />
         </Link>
         <nav className="flex flex-row gap-5 text-sm">
-          <Link href={`./`}>Home</Link>
-          <Link href={`./about`}>About</Link>
-          <Link href={'./prices'}>Prices</Link>
-          <Link href={'./contacts'}>Contacts</Link>
-          <Link href={'./portpholio'}>Porthpolio</Link>
+          <Link href={`./`}>{t('home')}</Link>
+          <Link href={`./about`}>{t('about')}</Link>
+          <Link href={'./prices'}>{t('prices')}</Link>
+          <Link href={'./contacts'}>{t('contacts')}</Link>
+          <Link href={'./portfolio'}>{t('portfolio')}</Link>
         </nav>
       </div>
       <div className="header-right flex flex-row gap-5 items-center">
@@ -49,7 +53,7 @@ function Navbar() {
           className="bg-black text-white hover:text-black border-black border-2"
           variant="secondary"
         >
-          Order consultation +
+          {h('button')} +
         </Button>
       </div>
     </header>
