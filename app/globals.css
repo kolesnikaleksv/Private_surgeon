@@ -5,6 +5,7 @@
 
 @theme inline {
   --color-main: oklch(93.7% 0.023 258.36);
+  --color-main-gray: oklch(0.74 0.0843 185.7);
   --color-avocado-100: oklch(0.8 0.8 120);
   --color-avocado-200: oklch(67.53% 0.261 5.93 / 94.01%);
   --color-avocado-300: oklch(34.29% 0.1529 156.28);

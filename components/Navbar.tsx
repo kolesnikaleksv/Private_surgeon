@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from './ui/button';
 import SelectLanguage from './SelectLanguage';
 import { Prosto_One } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import MobileNav from './MobileNav';
 import { Phone } from 'lucide-react';
+import DialogForm from './DialogForm';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -16,7 +16,6 @@ const prosto_one = Prosto_One({
 
 function Navbar() {
   const t = useTranslations('NavbarLinks');
-  const h = useTranslations('Header');
 
   return (
     <header className="p-5 w-full flex justify-between items-center bg-main">
@@ -46,12 +45,7 @@ function Navbar() {
           <Phone size={20} />
           +38 (097) 504 54 42
         </Link>
-        <Button
-          className="bg-black text-white hover:text-black border-black border-2"
-          variant="secondary"
-        >
-          {h('button')} +
-        </Button>
+        <DialogForm />
       </div>
       <MobileNav />
     </header>

@@ -13,7 +13,6 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Prosto_One } from 'next/font/google';
-import { Button } from './ui/button';
 import {
   AlignJustify,
   BriefcaseBusiness,
@@ -23,6 +22,7 @@ import {
   Phone,
   UserPen,
 } from 'lucide-react';
+import DialogForm from './DialogForm';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -32,7 +32,6 @@ const prosto_one = Prosto_One({
 
 function MobileNav() {
   const t = useTranslations('NavbarLinks');
-  const h = useTranslations('Header');
   return (
     <div className="lg:hidden bg-main">
       <Sheet>
@@ -91,12 +90,7 @@ function MobileNav() {
           </nav>
           <SheetFooter>
             <SheetClose asChild>
-              <Button
-                className="bg-black text-white hover:text-black border-black border-2"
-                variant="secondary"
-              >
-                {h('button')} +
-              </Button>
+              <DialogForm />
             </SheetClose>
           </SheetFooter>
         </SheetContent>
