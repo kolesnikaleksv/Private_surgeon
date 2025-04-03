@@ -5,6 +5,8 @@ import { Button } from './ui/button';
 import SelectLanguage from './SelectLanguage';
 import { Prosto_One } from 'next/font/google';
 import { useTranslations } from 'next-intl';
+import MobileNav from './MobileNav';
+import { Phone } from 'lucide-react';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -18,7 +20,7 @@ function Navbar() {
 
   return (
     <header className="p-5 w-full flex justify-between items-center bg-main">
-      <div className="header-left flex flex-row items-center gap-6">
+      <div className=" header-left flex flex-row items-center gap-6">
         <Link href={'./'}>
           <Image
             src="/logo_4.png"
@@ -27,7 +29,7 @@ function Navbar() {
             alt="Private surgeon logo"
           />
         </Link>
-        <nav className="flex flex-row gap-5 text-sm">
+        <nav className="hidden lg:flex flex-row gap-5 text-sm">
           <Link href={`./`}>{t('home')}</Link>
           <Link href={`./about`}>{t('about')}</Link>
           <Link href={'./prices'}>{t('prices')}</Link>
@@ -39,14 +41,9 @@ function Navbar() {
         <SelectLanguage />
         <Link
           href={'tel:+380662077434'}
-          className={`flex flex-row gap-2 hover:underline underline-offset-2 whitespace-nowrap ${prosto_one.className}`}
+          className={`hidden lg:flex flex-row items-center gap-2 hover:underline underline-offset-2 whitespace-nowrap ${prosto_one.className}`}
         >
-          <Image
-            src={'/phone_icon.svg'}
-            height={20}
-            width={20}
-            alt="Phone icon"
-          />
+          <Phone size={20} />
           +38 (097) 504 54 42
         </Link>
         <Button
@@ -56,6 +53,7 @@ function Navbar() {
           {h('button')} +
         </Button>
       </div>
+      <MobileNav />
     </header>
   );
 }

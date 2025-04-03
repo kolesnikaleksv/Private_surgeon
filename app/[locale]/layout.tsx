@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
 
-import './globals.css';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title: 'Privet Surgeon',
