@@ -12,5 +12,19 @@
   "HomePage": {
     "title": "Hello world!",
     "about": "What about our company?"
+  },
+  "Dialog": {
+    "title": "Get a consultation",
+    "description": "Leave your contact info and we will call you shortly",
+    "namePlaceholder": "Your first and last name",
+    "phonePlaceholder": "+3 8(0__) ___ __ __",
+    "button": "Send",
+    "nameLabel": "Full name",
+    "phoneLabel": "Contact number",
+    "nameDescription": "This is your public display name.",
+    "phoneDescription": "This is your phone number.",
+    "required": "Username must be at least 2 characters.",
+    "invalid": "Invalid phone number format.",
+    "max20": "Username must be less than 20 characters."
   }
 }

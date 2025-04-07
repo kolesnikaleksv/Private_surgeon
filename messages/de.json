@@ -12,5 +12,19 @@
   "HomePage": {
     "title": "Hallo Welt!",
     "about": "Was sollten Sie über unser Unternehmen wissen?"
+  },
+  "Dialog": {
+    "title": "Beratung erhalten",
+    "description": "Hinterlassen Sie Ihre Kontaktdaten und wir rufen Sie in Kürze zurück",
+    "namePlaceholder": "Ihr Vor- und Nachname",
+    "phonePlaceholder": "+3 8(0__) ___ __ __",
+    "button": "Senden",
+    "nameLabel": "Vollständiger Name",
+    "phoneLabel": "Kontaktnummer",
+    "nameDescription": "Dies ist Ihr öffentlicher Anzeigename.",
+    "phoneDescription": "Dies ist Ihre Telefonnummer.",
+    "required": "Der Benutzername muss mindestens 2 Zeichen lang sein.",
+    "invalid": "Ungültiges Telefonnummernformat.",
+    "max20": "Der Benutzername darf höchstens 20 Zeichen lang sein."
   }
 }

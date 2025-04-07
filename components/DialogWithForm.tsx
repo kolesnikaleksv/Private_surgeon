@@ -16,6 +16,7 @@ import ConsultationForm from '@/components/ConsultationForm';
 const DialogWithForm = () => {
   const h = useTranslations('Header');
   const [open, setOpen] = React.useState(false);
+  const dialog = useTranslations('Dialog');
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -25,11 +26,8 @@ const DialogWithForm = () => {
       </DialogTrigger>
       <DialogContent className="bg-main">
         <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
-          <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </DialogDescription>
+          <DialogTitle>{dialog('title')}</DialogTitle>
+          <DialogDescription>{dialog('description')}</DialogDescription>
         </DialogHeader>
         <ConsultationForm closeDialog={() => setOpen(false)} />
       </DialogContent>

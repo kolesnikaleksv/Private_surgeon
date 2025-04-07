@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,20 +14,9 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-
-const formSchema = z.object({
-  username: z
-    .string()
-    .min(2, {
-      message: 'Username must be at least 2 characters.',
-    })
-    .max(50),
-  phone: z
-    .string()
-    .refine((value) => /^[+]{1}(?:[0-9-()/.]\s?){11,14}[0-9]{1}$/.test(value), {
-      message: 'Invalid phone number format.',
-    }),
-});
+import { useTranslations } from 'next-intl';
+import { getContactFormSchema } from '@/lib/contact-form.schema';
+import { GetContactFormValues } from '@/lib/contact-form.schema';
 
 const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -37,16 +25,18 @@ type FormProps = {
 };
 
 const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const dialog = useTranslations('Dialog');
+
+  const form = useForm<GetContactFormValues>({
+    resolver: zodResolver(getContactFormSchema(dialog)),
     defaultValues: {
       username: '',
       phone: '',
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('consultation', values);
+  function onSubmit(data: GetContactFormValues) {
+    console.log('consultation', data);
     wait()
       .then((res) => console.log(res))
       .then(closeDialog);
@@ -60,13 +50,11 @@ const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>{dialog('nameLabel')}</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder={dialog('namePlaceholder')} {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
+              <FormDescription>{dialog('nameDescription')}</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -76,16 +64,17 @@ const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone number</FormLabel>
+              <FormLabel>{dialog('phoneLabel')}</FormLabel>
               <FormControl>
-                <Input placeholder="Type your phone number" {...field} />
+                <Input placeholder={dialog('phonePlaceholder')} {...field} />
               </FormControl>
-              <FormDescription>This is your phone number.</FormDescription>
+
+              <FormDescription>{dialog('phoneDescription')}</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{dialog('button')}</Button>
       </form>
     </Form>
   );
