@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import SelectLanguage from './SelectLanguage';
 import { Prosto_One } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import MobileNav from './MobileNav';
 import { Phone } from 'lucide-react';
-import DialogFormUnion from '@/components/DialogFormUnion';
+import MobileNav from '@/components/MobileNav';
+import SelectLanguage from '@/components/SelectLanguage';
+import DialogWithForm from '@/components/DialogWithForm';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -25,6 +25,8 @@ function Navbar() {
             src="/logo_4.png"
             height={50}
             width={200}
+            style={{ width: '200px', height: '50px' }}
+            priority
             alt="Private surgeon logo"
           />
         </Link>
@@ -46,7 +48,7 @@ function Navbar() {
           <Phone size={20} />
           +38 (097) 504 54 42
         </Link>
-        <DialogFormUnion />
+        <DialogWithForm />
       </div>
       <MobileNav />
     </header>

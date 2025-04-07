@@ -5,13 +5,12 @@ import {
   SheetContent,
   SheetDescription,
   SheetFooter,
-  // SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { Prosto_One } from 'next/font/google';
 import {
   AlignJustify,
@@ -22,7 +21,7 @@ import {
   Phone,
   UserPen,
 } from 'lucide-react';
-import DialogForm from './DialogForm';
+import DialogWithForm from '@/components/DialogWithForm';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -44,6 +43,7 @@ function MobileNav() {
               src="/logo_4.png"
               height={50}
               width={200}
+              style={{ width: '200px', height: '50px' }}
               alt="Private surgeon logo"
             />
           </SheetTitle>
@@ -90,7 +90,7 @@ function MobileNav() {
           </nav>
           <SheetFooter>
             <SheetClose asChild>
-              <DialogForm />
+              <DialogWithForm />
             </SheetClose>
           </SheetFooter>
         </SheetContent>
