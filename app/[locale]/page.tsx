@@ -10,6 +10,7 @@ export default function Home() {
         <Button className="bg-avocado-200">Click me</Button>
         <hr />
         <ManeAccordion />
+        <div className="w-full bg-avocado-300 h-0.5 mt-4 mb-4"></div>
       </div>
     </>
   );

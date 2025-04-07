@@ -6,7 +6,7 @@ import { Prosto_One } from 'next/font/google';
 import { useTranslations } from 'next-intl';
 import MobileNav from './MobileNav';
 import { Phone } from 'lucide-react';
-import DialogForm from './DialogForm';
+import DialogFormUnion from '@/components/DialogFormUnion';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -28,6 +28,7 @@ function Navbar() {
             alt="Private surgeon logo"
           />
         </Link>
+
         <nav className="hidden lg:flex flex-row gap-5 text-sm">
           <Link href={`./`}>{t('home')}</Link>
           <Link href={`./about`}>{t('about')}</Link>
@@ -45,7 +46,7 @@ function Navbar() {
           <Phone size={20} />
           +38 (097) 504 54 42
         </Link>
-        <DialogForm />
+        <DialogFormUnion />
       </div>
       <MobileNav />
     </header>
