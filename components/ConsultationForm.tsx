@@ -18,8 +18,6 @@ import { useTranslations } from 'next-intl';
 import { getContactFormSchema } from '@/lib/contact-form.schema';
 import { GetContactFormValues } from '@/lib/contact-form.schema';
 
-const wait = () => new Promise((resolve) => setTimeout(resolve, 1000));
-
 type FormProps = {
   closeDialog: () => void;
 };
@@ -35,11 +33,23 @@ const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
     },
   });
 
-  function onSubmit(data: GetContactFormValues) {
-    console.log('consultation', data);
-    wait()
-      .then((res) => console.log(res))
-      .then(closeDialog);
+  async function onSubmit(data: GetContactFormValues) {
+    try {
+      const res = await fetch('/api/sendToTelegram', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (!res.ok) {
+        console.error('Telegram error');
+      } else {
+        console.log('Message sent to Telegram');
+        closeDialog();
+      }
+    } catch (error) {
+      console.error('Fetch error', error);
+    }
   }
 
   return (
