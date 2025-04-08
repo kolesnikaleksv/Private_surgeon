@@ -17,6 +17,7 @@ import { Input } from '@/components/ui/input';
 import { useTranslations } from 'next-intl';
 import { getContactFormSchema } from '@/lib/contact-form.schema';
 import { GetContactFormValues } from '@/lib/contact-form.schema';
+import { toast } from 'sonner';
 
 type FormProps = {
   closeDialog: () => void;
@@ -43,12 +44,15 @@ const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
 
       if (!res.ok) {
         console.error('Telegram error');
+        toast.error(dialog('toastError'));
       } else {
         console.log('Message sent to Telegram');
+        toast.success(dialog('toastSuccess'));
         closeDialog();
       }
     } catch (error) {
       console.error('Fetch error', error);
+      toast.error(dialog('toastError'));
     }
   }
 

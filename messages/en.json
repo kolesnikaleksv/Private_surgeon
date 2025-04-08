@@ -25,6 +25,8 @@
     "phoneDescription": "This is your phone number.",
     "required": "Username must be at least 2 characters.",
     "invalid": "Invalid phone number format.",
-    "max20": "Username must be less than 20 characters."
+    "max20": "Username must be less than 20 characters.",
+    "toastSuccess": "Your contact details have been sent for processing. Thank you for your trust!",
+    "toastError": "Something went wrong! Try again later."
   }
 }

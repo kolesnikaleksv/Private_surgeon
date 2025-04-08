@@ -25,6 +25,8 @@
     "phoneDescription": "Dies ist Ihre Telefonnummer.",
     "required": "Der Benutzername muss mindestens 2 Zeichen lang sein.",
     "invalid": "Ungültiges Telefonnummernformat.",
-    "max20": "Der Benutzername darf höchstens 20 Zeichen lang sein."
+    "max20": "Der Benutzername darf höchstens 20 Zeichen lang sein.",
+    "toastSuccess": "Ihre Kontaktdaten wurden zur Bearbeitung gesendet. Vielen Dank für Ihr Vertrauen!",
+    "toastError": "Etwas ist schiefgelaufen! Versuchen Sie es später erneut."
   }
 }

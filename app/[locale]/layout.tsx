@@ -4,6 +4,7 @@ import { Manrope } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
+import { Toaster } from '@/components/ui/sonner';
 
 import '../globals.css';
 
@@ -38,6 +39,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
           </main>
+          <Toaster richColors />
         </NextIntlClientProvider>
       </body>
     </html>
