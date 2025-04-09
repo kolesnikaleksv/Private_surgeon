@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
 import { Toaster } from '@/components/ui/sonner';
+import Footer from '@/components/Footer';
 
 import '../globals.css';
 
@@ -33,12 +34,13 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={manrope.className}>
+      <body className={`min-h-screen flex flex-col ${manrope.className}`}>
         <NextIntlClientProvider>
-          <main className="font-work-sans">
-            <Navbar />
+          <Navbar />
+          <main className="container p-3 sm:p-5 flex-grow font-work-sans">
             {children}
           </main>
+          <Footer />
           <Toaster richColors />
         </NextIntlClientProvider>
       </body>

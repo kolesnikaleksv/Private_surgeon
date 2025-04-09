@@ -13,14 +13,19 @@ import { useTranslations } from 'next-intl';
 import { Sparkle } from 'lucide-react';
 import ConsultationForm from '@/components/ConsultationForm';
 
-const DialogWithForm = () => {
+const DialogWithForm = (props: { hideForMobile: boolean }) => {
   const h = useTranslations('Header');
   const [open, setOpen] = React.useState(false);
   const dialog = useTranslations('Dialog');
+  const { hideForMobile } = props;
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="flex flex-row whitespace-nowrap justify-center gap-2 items-baseline py-1 px-4 rounded-xl bg-black text-white hover:text-main-gray border-black border-2">
+      <DialogTrigger
+        className={`${
+          hideForMobile ? 'hidden md:flex' : 'flex'
+        } flex-row whitespace-nowrap justify-center gap-2 items-baseline py-1 px-4 rounded-xl bg-black text-white hover:text-main-gray border-black border-2`}
+      >
         {h('button')}
         <Sparkle size={10} />
       </DialogTrigger>

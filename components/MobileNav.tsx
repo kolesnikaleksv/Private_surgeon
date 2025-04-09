@@ -9,7 +9,6 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Prosto_One } from 'next/font/google';
 import {
@@ -22,6 +21,7 @@ import {
   UserPen,
 } from 'lucide-react';
 import DialogWithForm from '@/components/DialogWithForm';
+import LogoIconBlack from '@/components/icons/LogoIconBlack';
 
 const prosto_one = Prosto_One({
   weight: '400',
@@ -32,20 +32,16 @@ const prosto_one = Prosto_One({
 function MobileNav() {
   const t = useTranslations('NavbarLinks');
   return (
-    <div className="lg:hidden bg-main">
+    <div className="xl:hidden bg-main">
       <Sheet>
         <SheetTrigger>
           <AlignJustify size={40} />
         </SheetTrigger>
         <SheetContent className="bg-main p-5">
           <SheetTitle>
-            <Image
-              src="/logo_4.png"
-              height={50}
-              width={200}
-              style={{ width: '200px', height: '50px' }}
-              alt="Private surgeon logo"
-            />
+            <Link href={'./'}>
+              <LogoIconBlack className="h-10 sm:h-14" />
+            </Link>
           </SheetTitle>
 
           <Link
@@ -90,7 +86,7 @@ function MobileNav() {
           </nav>
           <SheetFooter>
             <SheetClose asChild>
-              <DialogWithForm />
+              <DialogWithForm hideForMobile={false} />
             </SheetClose>
           </SheetFooter>
         </SheetContent>

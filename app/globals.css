@@ -9,6 +9,8 @@
   --color-avocado-100: oklch(0.8 0.8 120);
   --color-avocado-200: oklch(67.53% 0.261 5.93 / 94.01%);
   --color-avocado-300: oklch(34.29% 0.1529 156.28);
+  --color-custom-black: oklch(0.14 0.0112 284.82);
+  --color-custom-gray: oklch(1 0 0 / 20%);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -88,6 +90,18 @@
   .green {
     @apply bg-avocado-300;
   }
+  .horizontal-f {
+    @apply flex flex-row;
+  }
+  .vertical-f {
+    @apply flex flex-col;
+  }
+  .container {
+    @apply max-w-7xl m-auto;
+  }
+  .hover-underline {
+    @apply hover:underline underline-offset-2;
+  }
   nav a {
     position: relative;
     display: block;
@@ -118,7 +132,6 @@
   nav a:hover::before {
     opacity: 1;
   }
-
   .SelectContent {
     width: var(--radix-select-trigger-width);
     max-height: var(--radix-select-content-available-height);
@@ -129,6 +142,24 @@
   }
   .adamantine {
     @apply flex flex-row gap-4 whitespace-nowrap;
+  }
+  footer {
+    .footer-head {
+      @apply grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] justify-items-center text-sm lg:text-base lg:grid-cols-[2fr_1fr_1.5fr_1fr] lg:justify-items-stretch gap-5 mb-6;
+    }
+    .footer-logo {
+      @apply flex justify-center pb-5 col-span-full w-full border-b border-[oklch(0.22_0.0214_284.49)] lg:border-none lg:col-span-1;
+    }
+    .footer-bottom {
+      @apply py-2 text-custom-gray text-xs grid sm:grid-cols-2 gap-2 items-center lg:py-0 lg:grid-cols-4 justify-items-center border-t border-[oklch(0.22_0.0214_284.49)] lg:border-none;
+
+      a {
+        @apply hover:underline underline-offset-2;
+      }
+    }
+    .footer-social {
+      @apply flex flex-row items-center gap-2 whitespace-nowrap;
+    }
   }
 }
 .AccordionChevron {

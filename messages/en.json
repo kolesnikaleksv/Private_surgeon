@@ -28,5 +28,13 @@
     "max20": "Username must be less than 20 characters.",
     "toastSuccess": "Your contact details have been sent for processing. Thank you for your trust!",
     "toastError": "Something went wrong! Try again later."
+  },
+  "Footer": {
+    "socialMedia": "We are on social media",
+    "offerAgreement": "Offer Agreement",
+    "privacyPolicy": "Privacy Policy",
+    "rights": "All rights reserved",
+    "city": "Dnipro",
+    "street": "26 Lesya Ukrainka Ave"
   }
 }

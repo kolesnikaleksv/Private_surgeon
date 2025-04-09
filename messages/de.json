@@ -28,5 +28,13 @@
     "max20": "Der Benutzername darf höchstens 20 Zeichen lang sein.",
     "toastSuccess": "Ihre Kontaktdaten wurden zur Bearbeitung gesendet. Vielen Dank für Ihr Vertrauen!",
     "toastError": "Etwas ist schiefgelaufen! Versuchen Sie es später erneut."
+  },
+  "Footer": {
+    "socialMedia": "Wir sind in den sozialen Medien",
+    "offerAgreement": "Angebotsvereinbarung",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "rights": "Alle Rechte vorbehalten",
+    "city": "Dnipro",
+    "street": "Lesja-Ukrainka-Allee 26"
   }
 }
