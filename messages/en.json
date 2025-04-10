@@ -30,11 +30,13 @@
     "toastError": "Something went wrong! Try again later."
   },
   "Footer": {
-    "socialMedia": "We are on social media",
     "offerAgreement": "Offer Agreement",
     "privacyPolicy": "Privacy Policy",
     "rights": "All rights reserved",
     "city": "Dnipro",
     "street": "26 Lesya Ukrainka Ave"
+  },
+  "SocialMediaGroup": {
+    "socialMedia": "We are on social media"
   }
 }

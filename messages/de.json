@@ -30,11 +30,13 @@
     "toastError": "Etwas ist schiefgelaufen! Versuchen Sie es später erneut."
   },
   "Footer": {
-    "socialMedia": "Wir sind in den sozialen Medien",
     "offerAgreement": "Angebotsvereinbarung",
     "privacyPolicy": "Datenschutzrichtlinie",
     "rights": "Alle Rechte vorbehalten",
     "city": "Dnipro",
     "street": "Lesja-Ukrainka-Allee 26"
+  },
+  "SocialMediaGroup": {
+    "socialMedia": "Wir sind in den sozialen Medien"
   }
 }

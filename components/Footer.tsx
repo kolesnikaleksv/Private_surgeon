@@ -1,12 +1,10 @@
 import React from 'react';
-import FacebookIcon from '@/components/icons/FacebookIcon';
-import TelegramIcon from '@/components/icons/TelegramIcon';
-import InstagramIcon from '@/components/icons/InstagramIcon';
 import LogoIcon from '@/components/icons/LogoIcon';
 import Link from 'next/link';
 import { Mail, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import PhoneLink from '@/components/PhoneLink';
+import SocialMediaGroup from './SocialMediaGroup';
 
 const Footer = () => {
   const t = useTranslations('NavbarLinks');
@@ -64,18 +62,7 @@ const Footer = () => {
           </div>
           <Link href={'/'}>{f('privacyPolicy')}</Link>
           <Link href={'/'}>{f('offerAgreement')}</Link>
-          <div className="footer-social">
-            {f('socialMedia')}
-            <Link target="_blank" href={'https://web.telegram.org/k/'}>
-              <TelegramIcon className="w-6 h-6" />
-            </Link>
-            <Link target="_blank" href={'https://www.facebook.com/'}>
-              <FacebookIcon className="w-6 h-6" />
-            </Link>
-            <Link target="_blank" href={'https://www.instagram.com/'}>
-              <InstagramIcon className="w-6 h-6" />
-            </Link>
-          </div>
+          <SocialMediaGroup />
         </div>
       </div>
     </footer>

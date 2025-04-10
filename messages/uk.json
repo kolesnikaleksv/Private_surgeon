@@ -30,11 +30,13 @@
     "toastError": "Щось пішло не так! Повторіть спробу пізніше."
   },
   "Footer": {
-    "socialMedia": "Ми в соцмережах",
     "offerAgreement": "Договір оферти",
     "privacyPolicy": "Політика конфіденційності",
     "rights": "Всі права захищені",
     "city": "M.Дніпро",
     "street": "пр. Лесі Українки 26"
+  },
+  "SocialMediaGroup": {
+    "socialMedia": "Ми в соцмережах"
   }
 }
