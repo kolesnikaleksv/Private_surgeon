@@ -38,5 +38,16 @@
   },
   "SocialMediaGroup": {
     "socialMedia": "Wir sind in den sozialen Medien"
+  },
+  "ContactPage": {
+    "clinic": "Privatklinik für Chirurgie",
+    "title": "Kontaktieren Sie uns",
+    "phone": "Telefonnummer",
+    "addressTitle": "Adresse",
+    "address": "Lesi-Ukrainky-Allee 26, Dnipro, Gebiet Dnipropetrowsk, 49000",
+    "email": "E-Mail",
+    "schedule": "Öffnungszeiten",
+    "scheduleWeek": "Montag–Freitag, 8:30 – 17:30",
+    "scheduleSut": "Samstag, 9:00 – 15:00"
   }
 }

@@ -12,7 +12,7 @@ function Navbar() {
   const hideForMobile = true;
 
   return (
-    <header className="p-3 sm:p-5 w-full  bg-main">
+    <header className="px-3 py-2.5 backdrop-blur-sm sm:p-2.5 w-full fixed bg-main-header">
       <div className="container flex justify-between items-center">
         <div className=" header-left flex flex-row items-center gap-6 ">
           <Link href={'./'}>

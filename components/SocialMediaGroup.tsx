@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 const SocialMediaGroup = () => {
   const s = useTranslations('SocialMediaGroup');
   return (
-    <div className="footer-social">
+    <div className="social-media-group">
       {s('socialMedia')}
       <Link target="_blank" href={'https://web.telegram.org/k/'}>
         <TelegramIcon className="w-6 h-6" />

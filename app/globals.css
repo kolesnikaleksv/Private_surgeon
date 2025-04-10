@@ -4,13 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-main: oklch(93.7% 0.023 258.36);
+  --color-main: oklch(0.92 0.0239 244.14);
+  --color-main-header: oklch(0.92 0.0239 244.14 / 70%);
   --color-main-gray: oklch(0.74 0.0843 185.7);
   --color-avocado-100: oklch(0.8 0.8 120);
   --color-avocado-200: oklch(67.53% 0.261 5.93 / 94.01%);
   --color-avocado-300: oklch(34.29% 0.1529 156.28);
   --color-custom-black: oklch(0.14 0.0112 284.82);
   --color-custom-gray: oklch(1 0 0 / 20%);
+  --color-custom-lightgray: [oklch(0.72 0 0)];
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -87,6 +89,15 @@
 }
 
 @layer utilities {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
   .green {
     @apply bg-avocado-300;
   }
@@ -97,7 +108,7 @@
     @apply flex flex-col;
   }
   .container {
-    @apply max-w-7xl m-auto;
+    @apply max-w-7xl mx-auto;
   }
   .hover-underline {
     @apply hover:underline underline-offset-2;
@@ -157,9 +168,9 @@
         @apply hover:underline underline-offset-2;
       }
     }
-    .footer-social {
-      @apply flex flex-row items-center gap-2 whitespace-nowrap;
-    }
+  }
+  .social-media-group {
+    @apply flex flex-row items-center gap-2 whitespace-nowrap;
   }
 }
 .AccordionChevron {
