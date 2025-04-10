@@ -4,15 +4,9 @@ import TelegramIcon from '@/components/icons/TelegramIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import LogoIcon from '@/components/icons/LogoIcon';
 import Link from 'next/link';
-import { Mail, MapPin, Phone } from 'lucide-react';
-import { Prosto_One } from 'next/font/google';
+import { Mail, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-
-const prosto_one = Prosto_One({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
+import PhoneLink from '@/components/PhoneLink';
 
 const Footer = () => {
   const t = useTranslations('NavbarLinks');
@@ -42,13 +36,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="vertical-f">
-            <Link
-              href={'tel:+380662077434'}
-              className={`flex flex-row gap-2 hover-underline items-center underline-offset-2 whitespace-nowrap ${prosto_one.className}`}
-            >
-              <Phone size={20} />
-              +38 (097) 504 54 42
-            </Link>
+            <PhoneLink className="flex" />
           </div>
           <div className="vertical-f">
             <Link

@@ -1,18 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { Prosto_One } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import { Phone } from 'lucide-react';
 import MobileNav from '@/components/MobileNav';
 import SelectLanguage from '@/components/SelectLanguage';
 import DialogWithForm from '@/components/DialogWithForm';
 import LogoIconBlack from '@/components/icons/LogoIconBlack';
-
-const prosto_one = Prosto_One({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
+import PhoneLink from '@/components/PhoneLink';
 
 function Navbar() {
   const t = useTranslations('NavbarLinks');
@@ -36,13 +29,7 @@ function Navbar() {
         </div>
         <div className="header-right flex flex-row gap-5 items-center">
           <SelectLanguage />
-          <Link
-            href={'tel:+380662077434'}
-            className={`hidden xl:flex flex-row items-center gap-2 hover:underline underline-offset-2 whitespace-nowrap ${prosto_one.className}`}
-          >
-            <Phone size={20} />
-            +38 (097) 504 54 42
-          </Link>
+          <PhoneLink className="hidden xl:flex" />
           <DialogWithForm hideForMobile={hideForMobile} />
           <MobileNav />
         </div>

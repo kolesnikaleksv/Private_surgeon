@@ -10,24 +10,17 @@ import {
 } from '@/components/ui/sheet';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { Prosto_One } from 'next/font/google';
 import {
   AlignJustify,
   BriefcaseBusiness,
   Building2,
   FileBadge,
   House,
-  Phone,
   UserPen,
 } from 'lucide-react';
 import DialogWithForm from '@/components/DialogWithForm';
 import LogoIconBlack from '@/components/icons/LogoIconBlack';
-
-const prosto_one = Prosto_One({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-});
+import PhoneLink from '@/components/PhoneLink';
 
 function MobileNav() {
   const t = useTranslations('NavbarLinks');
@@ -43,14 +36,7 @@ function MobileNav() {
               <LogoIconBlack className="h-10 sm:h-14" />
             </Link>
           </SheetTitle>
-
-          <Link
-            href={'tel:+380662077434'}
-            className={`flex flex-row gap-2 hover:underline items-center underline-offset-2 whitespace-nowrap ${prosto_one.className}`}
-          >
-            <Phone size={20} />
-            +38 (097) 504 54 42
-          </Link>
+          <PhoneLink className="flex" />
           <SheetDescription>Choose a page</SheetDescription>
           <nav className="flex flex-col mt-6 gap-5 text-sm ">
             <SheetClose asChild>
