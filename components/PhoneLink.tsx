@@ -13,7 +13,7 @@ type TPhoneLink = {
   className?: string;
 };
 
-const PhoneLink: React.FC<TPhoneLink> = ({ className = '' }) => {
+const PhoneLink: React.FC<TPhoneLink> = ({ className = 'flex' }) => {
   return (
     <Link
       href={'tel:+380662077434'}

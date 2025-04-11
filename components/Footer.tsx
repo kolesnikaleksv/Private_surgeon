@@ -34,7 +34,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="vertical-f">
-            <PhoneLink className="flex" />
+            <PhoneLink />
           </div>
           <div className="vertical-f">
             <Link

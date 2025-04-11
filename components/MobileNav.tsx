@@ -36,7 +36,7 @@ function MobileNav() {
               <LogoIconBlack className="h-10 sm:h-14" />
             </Link>
           </SheetTitle>
-          <PhoneLink className="flex" />
+          <PhoneLink />
           <SheetDescription>Choose a page</SheetDescription>
           <nav className="flex flex-col mt-6 gap-5 text-sm ">
             <SheetClose asChild>
