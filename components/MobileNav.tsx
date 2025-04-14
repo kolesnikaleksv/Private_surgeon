@@ -25,7 +25,7 @@ import PhoneLink from '@/components/PhoneLink';
 function MobileNav() {
   const t = useTranslations('NavbarLinks');
   return (
-    <div className="xl:hidden bg-main">
+    <div className="xl:hidden">
       <Sheet>
         <SheetTrigger>
           <AlignJustify size={40} />

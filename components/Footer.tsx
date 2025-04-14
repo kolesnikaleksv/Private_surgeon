@@ -48,11 +48,11 @@ const Footer = () => {
               {f('street')}
             </Link>
             <Link
-              href="privat-surgeon@gmail.com"
+              href="private-surgeon@gmail.com"
               className="horizontal-f items-center whitespace-nowrap gap-2 m-1  hover-underline"
             >
               <Mail size={20} />
-              privat-surgeon@gmail.com
+              private-surgeon@gmail.com
             </Link>
           </div>
         </div>
