@@ -40,7 +40,7 @@
     "socialMedia": "We are on social media"
   },
   "ContactPage": {
-    "clinic": "Privat Surgeon Clinic",
+    "clinic": "Private Surgeon Clinic",
     "title": "Contact us",
     "phone": "Phone number",
     "addressTitle": "Address",
@@ -49,5 +49,8 @@
     "schedule": "Working hours",
     "scheduleWeek": "Monday-Friday, 8.30 am - 5.30 pm",
     "scheduleSut": "Saturnday, 9 am - 3 pm"
+  },
+  "AboutPage": {
+    "title": "About The Private Surgeon Clinic"
   }
 }

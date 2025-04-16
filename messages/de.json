@@ -49,5 +49,8 @@
     "schedule": "Öffnungszeiten",
     "scheduleWeek": "Montag–Freitag, 8:30 – 17:30",
     "scheduleSut": "Samstag, 9:00 – 15:00"
+  },
+  "AboutPage": {
+    "title": "Über die Privatklinik für Chirurgie"
   }
 }

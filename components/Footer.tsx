@@ -11,7 +11,8 @@ const Footer = () => {
   const f = useTranslations('Footer');
 
   return (
-    <footer className="w-full pt-11 pb-4 px-3 sm:px-5 rounded-t-3xl  text-white bg-custom-black">
+    // It can has rounded shape at the top - rounded-t-3xl
+    <footer className="w-full pt-11 pb-4 px-3 sm:px-5  text-white bg-custom-black">
       <div className="container flex flex-col">
         <div className="footer-head">
           <div className="footer-logo">
