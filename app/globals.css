@@ -113,7 +113,7 @@
     @apply flex flex-col;
   }
   .container {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl xl:mx-auto;
   }
   .hover-underline {
     @apply hover:underline underline-offset-2;
