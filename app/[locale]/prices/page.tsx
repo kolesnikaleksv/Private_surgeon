@@ -13,6 +13,7 @@ const playfair = Playfair_Display({
 
 function Prices() {
   const p = useTranslations('PricesPage');
+
   return (
     <>
       <div className="flex flex-col lg:grid grid-cols-12 gap-6 my-12">
