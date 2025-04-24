@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 });
 
 function Prices() {
-  const p = useTranslations('PricesPage');
+  const p = useTranslations('PricePage');
 
   return (
     <>
@@ -37,8 +37,8 @@ function Prices() {
           />
         </div>
       </div>
-      <div className="w-full xl:flex items-center my-12">
-        <div className="mx-5 xl:mx-0 max-w-7xl bg-main p-10 rounded-2xl">
+      <div className="w-full flex items-center my-12 xl:px-5">
+        <div className="flex w-full mx-5 xl:mx-auto max-w-7xl bg-main p-10 rounded-2xl">
           <PriceList />
         </div>
       </div>

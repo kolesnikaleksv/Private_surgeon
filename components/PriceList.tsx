@@ -14,7 +14,7 @@ import { priceUk } from '@/localDB/priceUk';
 const PriceList = async () => {
   const locale = await getLocale();
   console.log(locale);
-  const t = await getTranslations('AboutPage');
+  const t = await getTranslations('PricePage');
 
   let data = priceEn;
   if (locale === 'de') {
@@ -32,17 +32,27 @@ const PriceList = async () => {
         {data.map((category) => (
           <AccordionItem key={category.id} value={`${category.id}`}>
             <AccordionTrigger>{category.title}</AccordionTrigger>
-            {category.items.map((item) => (
-              <AccordionContent key={item.id}>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center">{item.name}</div>
-                  <div className="flex justify-end gap-4 items-center">
-                    <div className="flex">{item.price} грн</div>
-                    <DialogWithForm hideForMobile={false} />
+            <AccordionContent>
+              <div className="flex flex-row w-full">
+                <div className="flex flex-1/2 justify-center">
+                  Назва послуги
+                </div>
+                <div className="flex flex-1/2 justify-end mr-[250px]">ціна</div>
+              </div>
+              {category.items.map((item) => (
+                <div key={item.id} className="p-2">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center">{item.name}</div>
+                    <div className="flex justify-end gap-4 items-center">
+                      <div className="flex">
+                        {`${item.price} ${t('currency')}`}
+                      </div>
+                      <DialogWithForm hideForMobile={false} />
+                    </div>
                   </div>
                 </div>
-              </AccordionContent>
-            ))}
+              ))}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

@@ -53,9 +53,10 @@
   "AboutPage": {
     "title": "Über die Privatklinik für Chirurgie"
   },
-  "PricesPage": {
+  "PricePage": {
     "title": "Preise für unsere Dienstleistungen",
     "description1": "In der PRIVATE SURGEON CLINIC bieten wir ein breites Spektrum an chirurgischen Leistungen zu erschwinglichen Preisen an. Unser Ziel ist es, eine hochwertige Behandlung für jeden Patienten zu gewährleisten.",
-    "description2": "Wir verwenden moderne Geräte und neueste Methoden, um die besten Ergebnisse zu erzielen."
+    "description2": "Wir verwenden moderne Geräte und neueste Methoden, um die besten Ergebnisse zu erzielen.",
+    "currency": "UAH"
   }
 }
