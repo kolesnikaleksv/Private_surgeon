@@ -26,26 +26,33 @@ const PriceList = async () => {
   }
 
   return (
-    <div className="w-full">
-      <h1>{t('title')}</h1>
+    <div className="w-full text-custom-darkgray">
+      <h1>{t('accordionTitle')}</h1>
       <Accordion type="single" collapsible>
         {data.map((category) => (
           <AccordionItem key={category.id} value={`${category.id}`}>
-            <AccordionTrigger>{category.title}</AccordionTrigger>
+            <AccordionTrigger className="text-xl font-medium ">
+              {category.title}
+            </AccordionTrigger>
             <AccordionContent>
-              <div className="flex flex-row w-full">
+              <div className="hidden md:flex flex-row w-full p-2 ">
                 <div className="flex flex-1/2 justify-center">
-                  Назва послуги
+                  {t('services')}
                 </div>
-                <div className="flex flex-1/2 justify-end mr-[250px]">ціна</div>
+                <div className="flex flex-1/2 justify-end mr-[240px]">
+                  {t('cost')}
+                </div>
               </div>
               {category.items.map((item) => (
-                <div key={item.id} className="p-2">
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center">{item.name}</div>
-                    <div className="flex justify-end gap-4 items-center">
-                      <div className="flex">
-                        {`${item.price} ${t('currency')}`}
+                <div key={item.id} className="text-sm md:text-base ml-4">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center py-2 border-custom-lightgray border-t-1">
+                    <div className="flex w-full md:items-center mb-2 md:mb-0">
+                      {item.name}
+                    </div>
+                    <div className="flex w-full justify-between md:justify-end gap-2 sm:gap-4 items-center">
+                      <div className="flex flex-row flex-nowrap gap-2 items-center">
+                        {item.price}
+                        <sub>{t('currency')}</sub>
                       </div>
                       <DialogWithForm hideForMobile={false} />
                     </div>

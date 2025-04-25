@@ -16,7 +16,7 @@ function Navbar() {
       <div className="container flex justify-between items-center">
         <div className=" header-left flex flex-row items-center gap-6 ">
           <Link href={'./'}>
-            <LogoIconBlack className="h-10 sm:h-14" />
+            <LogoIconBlack className="h-8 xs:h-10 sm:h-14" />
           </Link>
 
           <nav className="hidden xl:flex flex-row gap-5 text-sm">

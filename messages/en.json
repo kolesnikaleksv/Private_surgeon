@@ -57,6 +57,9 @@
     "title": "Prices for Our Services",
     "description1": "At The PRIVATE SURGEON CLINIC, we offer a wide range of surgical services at affordable prices. Our goal is to provide high-quality treatment for every patient.",
     "description2": "We use modern equipment and the latest techniques to ensure the best results.",
-    "currency": "UAH"
+    "currency": "UAH",
+    "accordionTitle": "Service Prices",
+    "services": "Service name",
+    "cost": "Price"
   }
 }

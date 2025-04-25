@@ -38,7 +38,7 @@ function Prices() {
         </div>
       </div>
       <div className="w-full flex items-center my-12 xl:px-5">
-        <div className="flex w-full mx-5 xl:mx-auto max-w-7xl bg-main p-10 rounded-2xl">
+        <div className="flex w-full mx-2 xs:mx-5 xl:mx-auto max-w-7xl bg-main p-5 md:p-10 rounded-2xl">
           <PriceList />
         </div>
       </div>
