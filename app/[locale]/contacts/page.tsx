@@ -13,30 +13,30 @@ function Contacts() {
         <div className="flex flex-col gap-4 flex-1 min-w-0">
           <p className="text-2xl">{c('clinic')}</p>
           <h1>{c('title')}</h1>
-          <p className="color-custom-lightgray">{c('phone')}</p>
+          <p className="color-custom-gray">{c('phone')}</p>
           <PhoneLink />
-          <div className="border-b border-custom-lightgray w-10"></div>
-          <p className="color-custom-lightgray">{c('addressTitle')}</p>
+          <div className="border-b border-custom-gray w-10"></div>
+          <p className="color-custom-gray">{c('addressTitle')}</p>
           <Link
             href={'https://maps.app.goo.gl/pUbUn9c7Ljqt4n7s6'}
             className="hover-underline"
           >
             {c('address')}
           </Link>
-          <div className="border-b border-custom-lightgray w-10"></div>
-          <p className="color-custom-lightgray">{c('schedule')}</p>
+          <div className="border-b border-custom-gray w-10"></div>
+          <p className="color-custom-gray">{c('schedule')}</p>
           <h3>
             {c('scheduleWeek')} <br /> {c('scheduleSut')}
           </h3>
-          <div className="border-b border-custom-lightgray w-10"></div>
-          <p className="color-custom-lightgray">{c('email')}</p>
+          <div className="border-b border-custom-gray w-10"></div>
+          <p className="color-custom-gray">{c('email')}</p>
           <Link
             href="private-surgeon@gmail.com"
             className="whitespace-nowrap  hover-underline"
           >
             private-surgeon@gmail.com
           </Link>
-          <div className="border-b border-custom-lightgray w-10"></div>
+          <div className="border-b border-custom-gray w-10"></div>
 
           <SocialMediaGroup />
         </div>

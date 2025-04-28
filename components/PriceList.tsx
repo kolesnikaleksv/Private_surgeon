@@ -45,7 +45,7 @@ const PriceList = async () => {
               </div>
               {category.items.map((item) => (
                 <div key={item.id} className="text-sm md:text-base ml-4">
-                  <div className="flex flex-col md:flex-row justify-between md:items-center py-2 border-custom-lightgray border-t-1">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center py-2 border-custom-gray border-t-1">
                     <div className="flex w-full md:items-center mb-2 md:mb-0">
                       {item.name}
                     </div>
