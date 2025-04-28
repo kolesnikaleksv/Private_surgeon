@@ -100,7 +100,7 @@ function Portfolio() {
               <div className="w-full h-[164px] relative">
                 <Image
                   // src={'/osteoporosis.webp'}
-                  src={'/osteoporosis_1.webp'}
+                  src={'/osteoarthritis.webp'}
                   alt={'osteoporosis'}
                   fill
                   className=" rounded-[10px] object-cover"
