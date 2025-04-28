@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Playfair_Display } from 'next/font/google';
-import { Button } from '@/components/ui/button';
+import PortfolioCard from '@/components/PortfolioCard';
+import { articleEn, CardData } from '@/localDB/articleEn';
+import { getLocale } from 'next-intl/server';
+import { articleDe } from '@/localDB/articleDe';
+import { articleUk } from '@/localDB/articleUk';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -10,7 +13,18 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-function Portfolio() {
+const Portfolio = async () => {
+  const locale = await getLocale();
+
+  let portfolioCards: CardData[] = articleEn;
+  if (locale === 'de') {
+    portfolioCards = articleDe;
+  } else if (locale === 'uk') {
+    portfolioCards = articleUk;
+  } else {
+    portfolioCards = articleEn;
+  }
+
   return (
     <>
       <section className="flex items-center min-h-100 w-full relative">
@@ -59,70 +73,13 @@ function Portfolio() {
       <section className="max-w-7xl mx-auto py-10 px-6">
         <h2>Приклади профeсійної роботи</h2>
         <ul className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 mt-7">
-          <li className="startup_card group">
-            <div className="flex my-2">6 March 2025</div>
-            <div className="flex justify-between items-center mt-5 gap-5">
-              <div className="flex-1 min-w-0">
-                <Link href={`/drbubnastory`}>
-                  <p className="font-medium text-[16px] text-black line-clamp-1">
-                    Dr.Bubna
-                  </p>
-                </Link>
-                <Link href={`/case/Osteoarthritis`}>
-                  <h3 className="font-semibold text-[26px] text-black line-clamp-1 break-all">
-                    Osteoarthritis
-                  </h3>
-                </Link>
-              </div>
-              <Link href={`/drbubnastory`}>
-                <Image
-                  src={'/avatar.png'}
-                  alt={'Dr. Bubna'}
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                  style={{ width: '48px', height: '48px' }}
-                  priority
-                  unoptimized
-                />
-              </Link>
-            </div>
-            <Link
-              href={`/case/Osteoarthritis`}
-              style={{ background: 'red', position: 'relative' }}
-            >
-              <p className="startup-card_desc">
-                Osteoarthritis is the single most common cause of disability in
-                older adults and the 2010 Global Burden of Disease Study
-                estimated that 10% to 15% of all adults aged over 60 had some
-                degree of symptomatic Osteoarthritis [1;2].
-              </p>
-              <div className="w-full h-[164px] relative">
-                <Image
-                  // src={'/osteoporosis.webp'}
-                  src={'/osteoarthritis.webp'}
-                  alt={'osteoporosis'}
-                  fill
-                  className=" rounded-[10px] object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 764px) 50vw, 33vw"
-                />
-              </div>
-            </Link>
-            <div className="flex justify-between items-center mt-5 gap-3">
-              <Link href={`/category/Orthopaedics`}>
-                <p className="font-medium text-[16px] text-black">
-                  Orthopaedics
-                </p>
-              </Link>
-              <Button className="statrup-card_btn" asChild>
-                <Link href={`/case/Osteoarthritis`}>Details</Link>
-              </Button>
-            </div>
-          </li>
+          {portfolioCards.map((item) => {
+            return <PortfolioCard key={item.id} data={item} />;
+          })}
         </ul>
       </section>
     </>
   );
-}
+};
 
 export default Portfolio;
