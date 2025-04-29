@@ -70,7 +70,7 @@ const Portfolio = async () => {
           </p>
         </div>
       </section>
-      <section className="max-w-7xl mx-auto py-10 px-6">
+      <section className="max-w-7xl mx-auto my-10 px-6">
         <h2>Приклади профeсійної роботи</h2>
         <ul className="grid md:grid-cols-3 sm:grid-cols-2 gap-5 mt-7">
           {portfolioCards.map((item) => {

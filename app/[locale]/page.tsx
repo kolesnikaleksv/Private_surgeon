@@ -1,17 +1,22 @@
-import { Button } from '@/components/ui/button';
-import ManeAccordion from '@/components/Accordion';
+import CarouselBanner from '@/components/CarouselBanner';
+import { Playfair_Display } from 'next/font/google';
 
-export default function Home() {
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
+
+const Home = () => {
   return (
     <>
-      <div className="m-0">
-        <h1 className="text-3xl">Hello Main Surgeon</h1>
-        <Button className="bg-avocado-100">Click me</Button>
-        <Button className="bg-avocado-200">Click me</Button>
-        <hr />
-        <ManeAccordion />
-        <div className="w-full bg-avocado-300 h-0.5 mt-4 mb-4"></div>
-      </div>
+      <section
+        className={`w-full relative overflow-hidden mb-10 ${playfair.className}`}
+      >
+        <CarouselBanner />
+      </section>
     </>
   );
-}
+};
+
+export default Home;
