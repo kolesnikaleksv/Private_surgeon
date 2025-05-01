@@ -61,5 +61,11 @@
     "accordionTitle": "Dienstleistungspreise",
     "services": "Dienstname",
     "cost": "Preis"
+  },
+  "sliderBanner": {
+    "slide1": "Wir können, was andere nicht können!",
+    "slide2": "Integration der europäischen Medizin in der Ukraine.",
+    "slide3": "Minimalinvasive Implantations- und Operationsmethoden.",
+    "slide4": "Nichts ist uns wichtiger als Ihr Komfort und Ihre Fürsorge."
   }
 }

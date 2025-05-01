@@ -9,31 +9,17 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const CarouselBanner = () => {
-  const starter = [
-    {
-      id: 1,
-      image: '/slider_surgeon_1.jpg',
-      description: 'Ми можем те, що не можуть інші!',
-    },
-    {
-      id: 2,
-      image: '/slider_surgeon_2.jpg',
-      description: 'Інтеграція Європейської медицини в Україні.',
-    },
-    {
-      id: 3,
-      image: '/slider_surgeon_3.webp',
-      description: 'Мінімально інвазивний метод імплантації та хірургії',
-    },
-  ];
+  const b = useTranslations('sliderBanner');
+
   return (
     <>
       <Carousel
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 5000,
           }),
         ]}
         opts={{
@@ -41,32 +27,98 @@ const CarouselBanner = () => {
           loop: true,
         }}
       >
-        <CarouselContent className="min-h-[550px] text-main-ultralight ml-0">
-          {starter.map((item) => (
-            <CarouselItem key={item.id} className="pl-0">
-              <div className="relative w-full h-full">
-                <Image
-                  src={item.image}
-                  fill
-                  style={{
-                    height: '100%',
-                    width: '100%',
-                    objectFit: 'cover',
-                  }}
-                  alt={'Slider picture 1'}
-                  priority
-                />
-                <div className="absolute left-0 right-0 bottom-0 top-0 p-5 xs:p-10 sm:p-25  z-2">
-                  <p className="text-5xl font-bold mt-10">The Private Clinic</p>
-                  <p className="text-3xl font-bold mt-10">{item.description}</p>
+        <CarouselContent className="min-h-[550px] text-custom-darkgray ml-0">
+          <CarouselItem key={1} className="pl-0">
+            <div className="relative w-full h-full">
+              <Image
+                src={'/slider_surgeon_1.jpg'}
+                fill
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'cover',
+                }}
+                alt={'Slider picture 1'}
+                priority
+              />
+              <div className="slider-textblock-wrapper">
+                <div className="slider-textblock">
+                  <p className="slider-title">The Private Surgeon Clinic</p>
+                  <p className="slider-description">{b('slide1')}</p>
                 </div>
-                <div className="absolute left-0 right-0 bottom-0 top-0 bg-black z-1 opacity-5"></div>
               </div>
-            </CarouselItem>
-          ))}
+              <div className="slider-overlay"></div>
+            </div>
+          </CarouselItem>
+          <CarouselItem key={2} className="pl-0">
+            <div className="relative w-full h-full">
+              <Image
+                src={'/slider_surgeon_2.jpg'}
+                fill
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'cover',
+                }}
+                alt={'Slider picture 2'}
+                priority
+              />
+              <div className="slider-textblock-wrapper">
+                <div className="slider-textblock">
+                  <p className="slider-title">The Private Surgeon Clinic</p>
+                  <p className="slider-description">{b('slide2')}</p>
+                </div>
+              </div>
+              <div className="slider-overlay"></div>
+            </div>
+          </CarouselItem>
+          <CarouselItem key={3} className="pl-0">
+            <div className="relative w-full h-full">
+              <Image
+                src={'/slider_surgeon_3.webp'}
+                fill
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'cover',
+                }}
+                alt={'Slider picture 3'}
+                priority
+              />
+              <div className="slider-textblock-wrapper">
+                <div className="slider-textblock">
+                  <p className="slider-title">The Private Surgeon Clinic</p>
+                  <p className="slider-description">{b('slide3')}</p>
+                </div>
+              </div>
+              <div className="slider-overlay"></div>
+            </div>
+          </CarouselItem>
+          <CarouselItem key={4} className="pl-0">
+            <div className="relative w-full h-full">
+              <Image
+                src={'/slider_surgeon_4.jpg'}
+                fill
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'cover',
+                }}
+                alt={'Slider picture 4'}
+                priority
+              />
+              <div className="slider-textblock-wrapper">
+                <div className="slider-textblock">
+                  <p className="slider-title">The Private Surgeon Clinic</p>
+                  <p className="slider-description">{b('slide4')}</p>
+                </div>
+              </div>
+              <div className="slider-overlay"></div>
+            </div>
+          </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="left-3" />
-        <CarouselNext className="right-3" />
+        <CarouselPrevious className="left-3 bg-main-header opacity-30 w-10 h-10 border-custom-darkgray" />
+        <CarouselNext className="right-3 bg-main-header opacity-30 w-10 h-10 border-custom-darkgray  " />
       </Carousel>
     </>
   );
