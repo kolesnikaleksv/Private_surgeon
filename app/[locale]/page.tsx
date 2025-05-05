@@ -1,7 +1,6 @@
 import { Playfair_Display } from 'next/font/google';
 import CarouselBanner from '@/components/CarouselBanner';
-import FeedbackCard from '@/components/FeedbackCard';
-import { feedbackCardsEn } from '@/localDB/feedbackCardsEn';
+import FeedbackSlider from '@/components/FeedbackSlider';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -10,8 +9,6 @@ const playfair = Playfair_Display({
 });
 
 const Home = () => {
-  const feedbackCards = feedbackCardsEn;
-
   return (
     <>
       <section
@@ -20,10 +17,8 @@ const Home = () => {
         <CarouselBanner />
       </section>
       <section className="container my-10">
-        <div className="mx-5 flex flex-row overflow-hidden gap-2">
-          {feedbackCards.map((item) => {
-            return <FeedbackCard key={item.id} item={item} />;
-          })}
+        <div className="mx-5 min-w-0">
+          <FeedbackSlider />
         </div>
       </section>
     </>

@@ -8,15 +8,15 @@ const MoreLess = ({ text }: { text: string }) => {
     setExpanded(!expanded);
   };
   return (
-    <>
-      <div
-        className={`overflow-hidden ${
-          expanded ? 'h-auto' : 'line-clamp-3 break-all'
-        }`}
-      >
+    <div
+      className={`flex flex-col justify-between ${
+        expanded ? 'h-auto' : 'h-28'
+      }`}
+    >
+      <div className={` ${!expanded ? 'line-clamp-3 break-all' : null}`}>
         {text}
       </div>
-      {text.length > 40 ? (
+      {text.length > 100 ? (
         <span
           className="size-fit text-custom-gray py-1 mt-2 cursor-pointer hover:underline underline-offset-2"
           onClick={toggleExpaded}
@@ -24,7 +24,7 @@ const MoreLess = ({ text }: { text: string }) => {
           {expanded ? 'Less' : 'More'}
         </span>
       ) : null}
-    </>
+    </div>
   );
 };
 

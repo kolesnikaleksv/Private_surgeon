@@ -6,7 +6,7 @@ import { TFeebackCard } from '@/localDB/feedbackCardsEn';
 const FeedbackCard = ({ item }: { item: TFeebackCard }) => {
   const { image, name, date, description, stars } = item;
   return (
-    <div className="flex flex-col w-1/4 shadow-100 p-5 rounded-lg">
+    <div className="flex flex-col h-full shadow-100 p-5 rounded-lg">
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center">
           <Image
@@ -18,7 +18,7 @@ const FeedbackCard = ({ item }: { item: TFeebackCard }) => {
             className="rounded-full mr-5"
           />
           <div className="flex flex-col justify-around">
-            <p className="font-bold">{name}</p>
+            <p className="font-bold line-clamp-1">{name}</p>
             <p className="text-xs opacity-50">{date}</p>
           </div>
         </div>
