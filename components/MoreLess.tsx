@@ -1,11 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
+import type { Swiper as SwiperType } from 'swiper';
 
-const MoreLess = ({ text }: { text: string }) => {
+const MoreLess = ({
+  text,
+  swiperRef,
+}: {
+  text: string;
+  swiperRef: React.RefObject<SwiperType | null>;
+}) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpaded = () => {
     setExpanded(!expanded);
+    setTimeout(() => {
+      swiperRef.current?.updateAutoHeight();
+    }, 100);
   };
   return (
     <div

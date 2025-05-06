@@ -2,11 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import MoreLess from '@/components/MoreLess';
 import { TFeebackCard } from '@/localDB/feedbackCardsEn';
+import type { Swiper as SwiperType } from 'swiper';
 
-const FeedbackCard = ({ item }: { item: TFeebackCard }) => {
+const FeedbackCard = ({
+  item,
+  swiperRef,
+}: {
+  item: TFeebackCard;
+  swiperRef: React.RefObject<SwiperType | null>;
+}) => {
   const { image, name, date, description, stars } = item;
   return (
-    <div className="flex flex-col h-full shadow-100 p-5 rounded-lg">
+    <div className="flex flex-col shadow-100 p-5 rounded-lg bg-white">
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center">
           <Image
@@ -18,17 +25,17 @@ const FeedbackCard = ({ item }: { item: TFeebackCard }) => {
             className="rounded-full mr-5"
           />
           <div className="flex flex-col justify-around">
-            <p className="font-bold line-clamp-1">{name}</p>
+            <p className="font-bold line-clamp-1 break-all">{name}</p>
             <p className="text-xs opacity-50">{date}</p>
           </div>
         </div>
         <Image
           src={'https://cdn.trustindex.io/assets/platform/Google/icon.svg'}
           alt={'google icon'}
-          height={30}
-          width={30}
+          height={27}
+          width={27}
           style={{ height: '30px', width: '30px' }}
-          className="mb-4"
+          className="mb-4 ml-1"
         />
       </div>
       <div className="flex flex-row gap-1 p5 my-4">
@@ -42,7 +49,7 @@ const FeedbackCard = ({ item }: { item: TFeebackCard }) => {
           />
         ))}
       </div>
-      <MoreLess text={description} />
+      <MoreLess text={description} swiperRef={swiperRef} />
     </div>
   );
 };

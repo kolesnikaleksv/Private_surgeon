@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/scrollbar';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -192,6 +195,16 @@
   }
   .startup-card_btn {
     @apply rounded-full bg-custom-gray font-medium text-[16px] text-white px-5 py-3;
+  }
+  /* Swiper slider */
+  .swiper-wrapper {
+    @apply mb-5;
+  }
+  .swiper-scrollbar {
+    @apply !bg-main-header;
+  }
+  .swiper-scrollbar-drag {
+    @apply !bg-main-gray;
   }
   /* Footer */
   footer {

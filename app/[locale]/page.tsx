@@ -16,9 +16,14 @@ const Home = () => {
       >
         <CarouselBanner />
       </section>
-      <section className="container my-10">
-        <div className="mx-5 min-w-0">
-          <FeedbackSlider />
+      <section className="bg-main-ultralight">
+        <div className="container py-10">
+          <div className="relative mx-5 md:mx-15">
+            <p className={`my-5 text-3xl ${playfair.className}`}>
+              Відгуки про нашу клінику і наш персонал:
+            </p>
+            <FeedbackSlider />
+          </div>
         </div>
       </section>
     </>
