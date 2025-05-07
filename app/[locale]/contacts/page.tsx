@@ -8,8 +8,8 @@ function Contacts() {
   const c = useTranslations('ContactPage');
 
   return (
-    <div className="container px-3">
-      <div className="wrapper w-full p-5 flex flex-col md:flex-row gap-4 bg-main my-12 rounded-2xl">
+    <div className="container px-3 my-20">
+      <div className="wrapper w-full p-5 flex flex-col md:flex-row gap-4 bg-main-ultralight rounded-2xl">
         <div className="flex flex-col gap-4 flex-1 min-w-0">
           <p className="text-2xl">{c('clinic')}</p>
           <h1>{c('title')}</h1>

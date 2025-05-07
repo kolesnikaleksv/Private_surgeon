@@ -4,6 +4,7 @@ import FeedbackSlider from '@/components/FeedbackSlider';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Contacts from './contacts/page';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -42,6 +43,9 @@ const Home = () => {
             <FeedbackSlider />
           </div>
         </div>
+      </section>
+      <section>
+        <Contacts />
       </section>
     </>
   );
