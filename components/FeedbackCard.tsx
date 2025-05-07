@@ -13,7 +13,7 @@ const FeedbackCard = ({
 }) => {
   const { image, name, date, description, stars } = item;
   return (
-    <div className="flex flex-col shadow-100 p-5 rounded-lg bg-white">
+    <div className="flex flex-col max-w-[390px] md:max-w-[280px] shadow-100 p-5 rounded-lg bg-white">
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center">
           <Image

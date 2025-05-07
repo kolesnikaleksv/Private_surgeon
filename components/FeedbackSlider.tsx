@@ -18,6 +18,7 @@ const FeedbackSlider = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        slidesPerView={1}
         spaceBetween={10}
         autoplay={{ delay: 4000 }}
         loop={true}
@@ -25,12 +26,11 @@ const FeedbackSlider = () => {
         scrollbar={{ draggable: true }}
         modules={[Autoplay, Navigation, Scrollbar]}
         breakpoints={{
-          1080: { slidesPerView: 4 },
-          780: { slidesPerView: 3 },
-          400: {
+          980: { slidesPerView: 4 },
+          768: { slidesPerView: 3 },
+          430: {
             slidesPerView: 2,
           },
-          300: { slidesPerView: 1 },
         }}
         className=""
         tag="section"
@@ -38,11 +38,7 @@ const FeedbackSlider = () => {
         next-el={'prev-button'}
       >
         {feedbackCards.map((item) => (
-          <SwiperSlide
-            className="w-auto max-w-[290px] shrink-0"
-            key={item.id}
-            tag="li"
-          >
+          <SwiperSlide key={item.id} tag="li">
             <FeedbackCard item={item} swiperRef={swiperRef} />
           </SwiperSlide>
         ))}
