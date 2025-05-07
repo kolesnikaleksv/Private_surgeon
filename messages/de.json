@@ -10,8 +10,9 @@
     "button": "Beratung buchen"
   },
   "HomePage": {
-    "title": "Hallo Welt!",
-    "about": "Was sollten Sie über unser Unternehmen wissen?",
+    "welcomeTitle": "Willkommen",
+    "welcomeDescription": "In der The Private Clinic erwarten Sie führende medizinische Fachkräfte, die modernste Techniken und Technologien einsetzen. Am wichtigsten ist jedoch: Alles ist darauf ausgelegt, Ihnen zu helfen, schneller wieder das Leben zu genießen – von der Ruhe unserer neuen Klinik bis hin zu Menschen, die Ihren Komfort an erste Stelle setzen.",
+    "welcomeButton": "Unsere Geschichte lesen",
     "feedback": "Bewertungen"
   },
   "Dialog": {

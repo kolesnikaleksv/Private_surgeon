@@ -10,8 +10,9 @@
     "button": "Order consultation"
   },
   "HomePage": {
-    "title": "Hello world!",
-    "about": "What about our company?",
+    "welcomeTitle": "Welcome",
+    "welcomeDescription": "At The Private Clinic, you’ll find world-leading medical professionals using best-in-class techniques and technology. But most importantly, you’ll know everything is designed to help you get back to enjoying life faster – from the tranquillity of our new clinic to people who prioritise your comfort.",
+    "welcomeButton": "Read our story",
     "feedback": "Feedback"
   },
   "Dialog": {

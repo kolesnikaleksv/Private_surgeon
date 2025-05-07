@@ -24,7 +24,7 @@ const DialogWithForm = (props: { hideForMobile: boolean }) => {
       <DialogTrigger
         className={`${
           hideForMobile ? 'hidden md:flex' : 'flex'
-        } flex-row whitespace-nowrap justify-center max-w-xs gap-2 items-baseline py-1 px-4 rounded-xl bg-black text-white hover:text-main-gray border-black border-2`}
+        } flex-row whitespace-nowrap justify-center max-w-xs gap-2 items-baseline py-1 px-4 rounded-xl bg-custom-black text-white hover:text-main-gray border-black border-2`}
       >
         {h('button')}
         <Sparkle size={10} />
