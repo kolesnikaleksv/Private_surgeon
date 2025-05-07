@@ -1,7 +1,7 @@
 export const feedbackCardsEn = [
   {
     id: 1,
-    image: '/noavatar.gif',
+    image: '/avatars/avatar_4.jpg',
     name: 'Любка Островская',
     date: '5.11.2024',
 
@@ -19,7 +19,7 @@ export const feedbackCardsEn = [
   },
   {
     id: 3,
-    image: '/noavatar.gif',
+    image: '/avatars/avatar_1.jpg',
     name: 'Ангелина',
     date: '28.10.2023',
     description:
@@ -28,7 +28,7 @@ export const feedbackCardsEn = [
   },
   {
     id: 4,
-    image: '/noavatar.gif',
+    image: '/avatars/avatar_2.jpg',
     name: 'Оксана',
     date: '16.06.2020',
     description:
@@ -55,7 +55,7 @@ export const feedbackCardsEn = [
   },
   {
     id: 7,
-    image: '/noavatar.gif',
+    image: '/avatars/avatar_3.jpg',
     name: '',
     date: '25.02.2022',
     description: 'Бубна Владимир Михайлович спас мою стопу. Врач от Бога.',

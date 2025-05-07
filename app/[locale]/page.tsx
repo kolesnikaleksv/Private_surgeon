@@ -1,6 +1,7 @@
 import { Playfair_Display } from 'next/font/google';
 import CarouselBanner from '@/components/CarouselBanner';
 import FeedbackSlider from '@/components/FeedbackSlider';
+import { useTranslations } from 'next-intl';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -9,6 +10,7 @@ const playfair = Playfair_Display({
 });
 
 const Home = () => {
+  const h = useTranslations('HomePage');
   return (
     <>
       <section
@@ -20,7 +22,7 @@ const Home = () => {
         <div className="container py-10">
           <div className="relative mx-5 md:mx-15">
             <p className={`my-5 text-3xl ${playfair.className}`}>
-              Відгуки про нашу клінику і наш персонал:
+              {h('feedback')}:
             </p>
             <FeedbackSlider />
           </div>
