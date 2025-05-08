@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import { CardData } from '@/localDB/articleEn';
 
 const PortfolioCard = ({ data }: { data: CardData }) => {
-  const { date, author, title, avatarImg, article, articleImg, category } =
+  const { id, date, author, title, avatarImg, article, articleImg, category } =
     data;
 
   return (
@@ -57,7 +57,7 @@ const PortfolioCard = ({ data }: { data: CardData }) => {
           <p className="font-medium text-[16px] text-black">{category}</p>
         </Link>
         <Button className="statrup-card_btn" asChild>
-          <Link href={`/case/Osteoarthritis`}>Details</Link>
+          <Link href={`/portfolio/${id}`}>Details</Link>
         </Button>
       </div>
     </li>

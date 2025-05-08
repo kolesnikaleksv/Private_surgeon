@@ -21,16 +21,16 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-row justify-around gap-2 w-full md:flex-col sm:gap-1">
-            <Link className="hover-underline" href={`./`}>
+            <Link className="hover-underline" href={`/`}>
               {t('home')}
             </Link>
-            <Link className="hover-underline" href={`./about`}>
+            <Link className="hover-underline" href={`/about`}>
               {t('about')}
             </Link>
-            <Link className="hover-underline" href={'./prices'}>
+            <Link className="hover-underline" href={'/prices'}>
               {t('prices')}
             </Link>
-            <Link className="hover-underline" href={'./portfolio'}>
+            <Link className="hover-underline" href={'/portfolio'}>
               {t('portfolio')}
             </Link>
           </div>

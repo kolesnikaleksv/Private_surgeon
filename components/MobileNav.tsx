@@ -32,7 +32,7 @@ function MobileNav() {
         </SheetTrigger>
         <SheetContent className="bg-main p-5">
           <SheetTitle>
-            <Link href={'./'}>
+            <Link href={'/'}>
               <LogoIconBlack className="h-10 sm:h-14" />
             </Link>
           </SheetTitle>
@@ -40,31 +40,31 @@ function MobileNav() {
           <SheetDescription>Choose a page</SheetDescription>
           <nav className="flex flex-col mt-6 gap-5 text-sm ">
             <SheetClose asChild>
-              <Link href={`./`} className="adamantine">
+              <Link href={`/`} className="adamantine">
                 <House size={20} />
                 {t('home')}
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={`./about`} className="adamantine">
+              <Link href={`/about`} className="adamantine">
                 <Building2 size={20} />
                 {t('about')}{' '}
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={'./prices'} className="adamantine">
+              <Link href={'/prices'} className="adamantine">
                 <FileBadge size={20} />
                 {t('prices')}
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={'./contacts'} className="adamantine">
+              <Link href={'/contacts'} className="adamantine">
                 <UserPen size={20} />
                 {t('contacts')}
               </Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href={'./portfolio'} className="adamantine">
+              <Link href={'/portfolio'} className="adamantine">
                 <BriefcaseBusiness size={20} />
                 {t('portfolio')}
               </Link>
