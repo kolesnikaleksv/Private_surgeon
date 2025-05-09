@@ -101,9 +101,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse gap-5 lg:block relative mx-5 lg:mx-0 lg:p-30">
-        <div className="flex flex-col lg:grid grid-cols-12">
-          <div className="col-start-1 col-end-6 flex flex-col gap-5 lg:text-white relative z-10">
+      <div className="flex flex-col-reverse gap-5 md:block relative mx-5 md:mx-0 md:p-10 lg:p-30">
+        <div className="flex flex-col md:grid grid-cols-12">
+          <div className="md:col-start-1 md:col-end-8 lg:col-start-1 lg:col-end-6 flex flex-col gap-5 md:text-white relative z-10">
             <h2 className={`mb-10 font-normal ${playfair.className}`}>
               Dr. Volodymyr Bubna
             </h2>
@@ -124,7 +124,7 @@ const About = () => {
           alt={'Dr. background'}
           width={1000}
           height={300}
-          className="lg:absolute right-0 bottom-0 left-0 top-0 w-full h-full object-cover"
+          className="md:absolute right-0 bottom-0 left-0 top-0 w-full h-full object-cover"
         />
       </div>
     </>
