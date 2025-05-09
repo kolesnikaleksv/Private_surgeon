@@ -69,5 +69,10 @@
     "slide2": "Integration der europäischen Medizin in der Ukraine.",
     "slide3": "Minimalinvasive Implantations- und Operationsmethoden.",
     "slide4": "Nichts ist uns wichtiger als Ihr Komfort und Ihre Fürsorge."
+  },
+  "PortfolioCase": {
+    "sameCaterogy": "Artikel derselben Kategorie",
+    "buttonBack": "Zurück zur Liste",
+    "alternative": "In dieser Kategorie gibt es keine weiteren Artikel."
   }
 }

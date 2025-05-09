@@ -5,8 +5,16 @@ import { Button } from './ui/button';
 import { CardData } from '@/localDB/articleEn';
 
 const PortfolioCard = ({ data }: { data: CardData }) => {
-  const { id, date, author, title, avatarImg, article, articleImg, category } =
-    data;
+  const {
+    id,
+    date,
+    author,
+    title,
+    avatarImg,
+    articleImg,
+    category,
+    description,
+  } = data;
 
   return (
     <li className="startup_card group">
@@ -18,7 +26,7 @@ const PortfolioCard = ({ data }: { data: CardData }) => {
               {author}
             </p>
           </Link>
-          <Link href={`/case/Osteoarthritis`}>
+          <Link href={`/portfolio/${id}`}>
             <h3 className="font-semibold text-[26px] text-black line-clamp-1 break-all">
               {title}
             </h3>
@@ -38,10 +46,10 @@ const PortfolioCard = ({ data }: { data: CardData }) => {
         </Link>
       </div>
       <Link
-        href={`/case/Osteoarthritis`}
+        href={`/portfolio/${id}`}
         style={{ background: 'red', position: 'relative' }}
       >
-        <p className="startup-card_desc">{article}</p>
+        <p className="startup-card_desc">{description}</p>
         <div className="w-full h-[164px] relative">
           <Image
             src={articleImg}
@@ -53,7 +61,7 @@ const PortfolioCard = ({ data }: { data: CardData }) => {
         </div>
       </Link>
       <div className="flex justify-between items-center mt-5 gap-3">
-        <Link href={`/category/Orthopaedics`}>
+        <Link href={`/portfolio/${id}`}>
           <p className="font-medium text-[16px] text-black">{category}</p>
         </Link>
         <Button className="statrup-card_btn" asChild>

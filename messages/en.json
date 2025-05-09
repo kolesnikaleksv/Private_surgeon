@@ -69,5 +69,10 @@
     "slide2": "Integration of European medicine in Ukraine.",
     "slide3": "Minimally invasive implantation and surgical techniques.",
     "slide4": "Nothing matters more than your care and comfort."
+  },
+  "PortfolioCase": {
+    "sameCaterogy": "Articles of the same category",
+    "buttonBack": "Back to the list",
+    "alternative": "There are no other articles in this category."
   }
 }
