@@ -32,10 +32,10 @@ function SelectLanguage() {
       <SelectPortal>
         <SelectContent
           position="popper"
-          className="dropdown-content-width-fullelectContent bg-main"
+          className="dropdown-content-width-fullelectContent bg-main z-101"
         >
           {routing.locales.map((selectItem) => (
-            <SelectItem key={selectItem} value={selectItem}>
+            <SelectItem key={selectItem} value={selectItem} className="">
               {selectItem}
             </SelectItem>
           ))}

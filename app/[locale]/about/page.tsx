@@ -115,7 +115,7 @@ const About = () => {
               Private Clinic.
             </p>
             <Button className="bg-transparent text-2xl p-5 rounded-3xl border-white border-2 hover:bg-white hover:text-black">
-              <Link href="/">Read Dr. Bubna&apos;s story</Link>
+              <Link href={'/drbubnastory'}>Read Dr. Bubna&apos;s story</Link>
             </Button>
           </div>
         </div>
