@@ -49,14 +49,14 @@ const TestFonts = () => {
   return (
     <div className="m-5 flex flex-col gap-3">
       TestFonts Componet
-      <h1 className={`s ${playfair.className}`}>About The Privat Surgeon</h1>
-      <h1 className={libre.className}>About The Privat Surgeon</h1>
-      <h1 className={cormorant.className}>About The Privat Surgeon</h1>
-      <h1 className={inter.className}>About The Privat Surgeon</h1>
-      <h1 className={lato.className}>About The Privat Surgeon</h1>
-      <h1 className={sourceSans.className}>About The Privat Surgeon</h1>
-      <h1 className={ibmPlex.className}>About The Privat Surgeon</h1>
-      <h1 className={prosto_one.className}>About The Privat Surgeon</h1>
+      <h1 className={`s ${playfair.className}`}>About The Private Surgeon</h1>
+      <h1 className={libre.className}>About The Private Surgeon</h1>
+      <h1 className={cormorant.className}>About The Private Surgeon</h1>
+      <h1 className={inter.className}>About The Private Surgeon</h1>
+      <h1 className={lato.className}>About The Private Surgeon</h1>
+      <h1 className={sourceSans.className}>About The Private Surgeon</h1>
+      <h1 className={ibmPlex.className}>About The Private Surgeon</h1>
+      <h1 className={prosto_one.className}>About The Private Surgeon</h1>
     </div>
   );
 };

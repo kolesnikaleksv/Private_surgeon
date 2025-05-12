@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import '../globals.css';
 
 export const metadata: Metadata = {
-  title: 'Privet Surgeon',
+  title: 'Private Surgeon',
   description: 'Website for the best surgeon',
 };
 
