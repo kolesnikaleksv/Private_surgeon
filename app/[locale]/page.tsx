@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Contacts from './contacts/page';
+import ConsultationBlock from '@/components/ConstultationBlock';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -33,6 +34,9 @@ const Home = () => {
             </Button>
           </div>
         </div>
+      </section>
+      <section className="bg-main-ultralight">
+        <ConsultationBlock />
       </section>
       <section className="bg-main-ultralight">
         <div className="container py-20">

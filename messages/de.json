@@ -74,5 +74,12 @@
     "sameCaterogy": "Artikel derselben Kategorie",
     "buttonBack": "Zurück zur Liste",
     "alternative": "In dieser Kategorie gibt es keine weiteren Artikel."
+  },
+  "ConsultationBlock": {
+    "title": "Medizinische Beratung per Video, Audio oder Chat",
+    "descr1": "Erhalten Sie eine vollständige Online-Beratung mit dem ausgewählten Arzt im komfortablen Format – von zu Hause, dem Büro oder unterwegs;",
+    "descr2": "Hilfe in der Nähe, am Telefon",
+    "descr3": "Verfügbarkeit zu jeder Zeit",
+    "descr4": "Senden Sie Untersuchungsergebnisse, Tests und Fotos im Chat an Ihren Arzt"
   }
 }

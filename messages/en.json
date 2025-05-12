@@ -74,5 +74,12 @@
     "sameCaterogy": "Articles of the same category",
     "buttonBack": "Back to the list",
     "alternative": "There are no other articles in this category."
+  },
+  "ConsultationBlock": {
+    "title": "Medical consultation via video, audio or chat",
+    "descr1": "Get a full online consultation with your chosen doctor in a comfortable format - from home, office or on the go;",
+    "descr2": "Help close by, on the phone",
+    "descr3": "Availability at any time",
+    "descr4": "Send results of research, tests and photos to chat with your doctor"
   }
 }
