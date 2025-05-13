@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`min-h-screen flex flex-col ${manrope.className}`}>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale}>
           <Navbar />
           <main className="mt-[66px] sm:mt-19 flex-grow font-work-sans">
             {children}
