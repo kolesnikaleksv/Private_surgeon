@@ -25,7 +25,7 @@ function SelectLanguage() {
     router.push(`/${newLocale}/${path}`);
   };
   return (
-    <Select onValueChange={switchLanguage}>
+    <Select onValueChange={switchLanguage} value={currentLocale}>
       <SelectTrigger>
         <SelectValue placeholder={currentLocale} />
       </SelectTrigger>
@@ -35,7 +35,7 @@ function SelectLanguage() {
           className="dropdown-content-width-fullelectContent bg-main z-101"
         >
           {routing.locales.map((selectItem) => (
-            <SelectItem key={selectItem} value={selectItem} className="">
+            <SelectItem key={selectItem} value={selectItem}>
               {selectItem}
             </SelectItem>
           ))}

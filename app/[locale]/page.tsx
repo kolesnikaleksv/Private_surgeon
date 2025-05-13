@@ -1,11 +1,12 @@
 import { Playfair_Display } from 'next/font/google';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import CarouselBanner from '@/components/CarouselBanner';
 import FeedbackSlider from '@/components/FeedbackSlider';
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Contacts from './contacts/page';
+import Contacts from '@/app/[locale]/contacts/page';
 import ConsultationBlock from '@/components/ConstultationBlock';
+import TeamSliderBlock from '@/components/TeamSliderBlock';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -37,6 +38,9 @@ const Home = () => {
       </section>
       <section className="bg-main-ultralight">
         <ConsultationBlock />
+      </section>
+      <section className="my-20 px-10">
+        <TeamSliderBlock />
       </section>
       <section className="bg-main-ultralight">
         <div className="container py-20">
