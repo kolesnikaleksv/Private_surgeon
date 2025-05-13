@@ -5,13 +5,14 @@ import TelegramIcon from '@/components/icons/TelegramIcon';
 import FacebookIcon from '@/components/icons/FacebookIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import PortfolioCard from '@/components/PortfolioCard';
-import { getLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { articleEn, type CardData } from '@/localDB/articleEn';
 import { articleDe } from '@/localDB/articleDe';
 import { articleUk } from '@/localDB/articleUk';
 
 const page = async () => {
   const locale = await getLocale();
+  const d = await getTranslations('DrBubnaStory');
 
   let portfolioCards: CardData[] = articleEn;
   if (locale === 'de') {
@@ -100,35 +101,13 @@ const page = async () => {
           </div>
         </div>
         <div className="flex flex-col flex-1 gap-4 bg-main-ultralight w-full py-10 md:py-20 px-5 md:pl-10 md:pr-0">
-          <h1>About</h1>
-          <h4>
-            Volodymyr Bubna is a distinguished trauma and hand surgeon with over
-            two decades of hands-on medical experience, known for his precision,
-            dedication, and patient-centered approach to care. A leading figure
-            in his field, Dr. Bubna has successfully treated thousands of
-            patients, ranging from acute trauma cases to complex reconstructive
-            procedures.
-          </h4>
-          <h4>
-            With expertise spanning traumatology, hand surgery, and general
-            surgery, Dr. Bubna combines deep clinical knowledge with the latest
-            surgical techniques to ensure optimal outcomes. His work is grounded
-            in evidence-based medicine, yet driven by empathy and a tireless
-            commitment to advancing patient well-being.
-          </h4>
-          <h4>
-            Beyond the operating room, Volodymyr Bubna actively contributes to
-            medical education and surgical innovation. He collaborates with
-            institutions and mentors young physicians, continuously raising the
-            standards of care.
-          </h4>
-          <h4>
-            Recognized by peers and patients alike, Dr. Bubna brings together
-            skill, experience, and integrity—hallmarks of a truly exceptional
-            surgeon.
-          </h4>
+          <h1>{d('about')}</h1>
+          <h4>{d('descr1')}</h4>
+          <h4>{d('descr2')}</h4>
+          <h4>{d('descr3')}</h4>
+          <h4>{d('descr4')}</h4>
           <div>
-            <h2>Articles</h2>
+            <h2>{d('articles')}</h2>
             <ul className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-7 md:mr-10">
               {cards.map((item) => {
                 return <PortfolioCard key={item.id} data={item} />;

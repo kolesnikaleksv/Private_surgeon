@@ -22,12 +22,12 @@ function SelectLanguage() {
     if (newLocale === currentLocale) return;
 
     const path = pathname.split('/').slice(2).join('/');
-    router.push(`/${newLocale}/${path}`);
+    router.replace(`/${newLocale}/${path}`);
   };
   return (
     <Select onValueChange={switchLanguage} value={currentLocale}>
       <SelectTrigger>
-        <SelectValue placeholder={currentLocale} />
+        <SelectValue />
       </SelectTrigger>
       <SelectPortal>
         <SelectContent

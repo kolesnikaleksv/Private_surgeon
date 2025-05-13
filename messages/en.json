@@ -81,5 +81,13 @@
     "descr2": "Help close by, on the phone",
     "descr3": "Availability at any time",
     "descr4": "Send results of research, tests and photos to chat with your doctor"
+  },
+  "DrBubnaStory": {
+    "about": "About",
+    "descr1": "Volodymyr Bubna is a distinguished trauma and hand surgeon with over two decades of hands-on medical experience, known for his precision, dedication, and patient-centered approach to care. A leading figure in his field, Dr. Bubna has successfully treated thousands of patients, ranging from acute trauma cases to complex reconstructive procedures.",
+    "descr2": "With expertise spanning traumatology, hand surgery, and general surgery, Dr. Bubna combines deep clinical knowledge with the latest surgical techniques to ensure optimal outcomes. His work is grounded in evidence-based medicine, yet driven by empathy and a tireless commitment to advancing patient well-being.",
+    "descr3": "Beyond the operating room, Volodymyr Bubna actively contributes to medical education and surgical innovation. He collaborates with institutions and mentors young physicians, continuously raising the standards of care.",
+    "descr4": "Recognized by peers and patients alike, Dr. Bubna brings together skill, experience, and integrity—hallmarks of a truly exceptional surgeon.",
+    "articles": "Articles"
   }
 }
