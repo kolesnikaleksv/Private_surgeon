@@ -25,7 +25,7 @@ const ConsultationBlock = async () => {
               width={537}
               height={586}
               alt={'smartphone'}
-              className="w-full"
+              className="w-full h-auto"
             />
             <div className="absolute top-0 right-0 w-5/6">
               <Image

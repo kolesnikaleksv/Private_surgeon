@@ -88,7 +88,11 @@ const ConsultationForm: React.FC<FormProps> = ({ closeDialog }) => {
             </FormItem>
           )}
         />
-        <Button type="submit">{dialog('button')}</Button>
+        <div className="flex justify-center">
+          <Button className="rounded-xl hover:text-main-gray" type="submit">
+            {dialog('button')}
+          </Button>
+        </div>
       </form>
     </Form>
   );

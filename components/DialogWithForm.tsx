@@ -31,7 +31,9 @@ const DialogWithForm = (props: { hideForMobile: boolean }) => {
       </DialogTrigger>
       <DialogContent className="bg-main">
         <DialogHeader>
-          <DialogTitle>{dialog('title')}</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">
+            {dialog('title')}
+          </DialogTitle>
           <DialogDescription>{dialog('description')}</DialogDescription>
         </DialogHeader>
         <ConsultationForm closeDialog={() => setOpen(false)} />
