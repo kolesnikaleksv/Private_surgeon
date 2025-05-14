@@ -25,7 +25,7 @@ function SelectLanguage() {
     router.replace(`/${newLocale}/${path}`);
   };
   return (
-    <Select onValueChange={switchLanguage}>
+    <Select onValueChange={switchLanguage} value={currentLocale}>
       <SelectTrigger>
         <SelectValue />
       </SelectTrigger>
