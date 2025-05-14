@@ -1,4 +1,5 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import React from 'react';
 import TelegramIcon from '@/components/icons/TelegramIcon';
 import FacebookIcon from '@/components/icons/FacebookIcon';

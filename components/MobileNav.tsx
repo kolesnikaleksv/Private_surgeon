@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import Link from 'next/link';
+// import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import {
   AlignJustify,
@@ -42,6 +43,7 @@ function MobileNav() {
             <SheetClose asChild>
               <Link href={`/`} className="adamantine">
                 <House size={20} />
+
                 {t('home')}
               </Link>
             </SheetClose>

@@ -1,17 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import TelegramIcon from '@/components/icons/TelegramIcon';
 import FacebookIcon from '@/components/icons/FacebookIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import PortfolioCard from '@/components/PortfolioCard';
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
 import { articleEn, type CardData } from '@/localDB/articleEn';
 import { articleDe } from '@/localDB/articleDe';
 import { articleUk } from '@/localDB/articleUk';
 
 const page = async () => {
   const locale = await getLocale();
+  setRequestLocale(locale);
   const d = await getTranslations('DrBubnaStory');
 
   let portfolioCards: CardData[] = articleEn;

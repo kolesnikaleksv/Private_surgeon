@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
 import { Toaster } from '@/components/ui/sonner';
 import Footer from '@/components/Footer';
-import { getLocale, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 
 import '../globals.css';
 
@@ -26,13 +26,12 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-}: // params,
-{
+  params,
+}: {
   children: React.ReactNode;
-  // params: Promise<{ locale: string }>;
+  params: Promise<{ locale: string }>;
 }) {
-  // const { locale } = await params;
-  const locale = await getLocale();
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();

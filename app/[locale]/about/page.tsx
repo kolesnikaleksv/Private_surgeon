@@ -4,7 +4,8 @@ import ColorFadeCanvas from '@/components/Canvas';
 import { Playfair_Display } from 'next/font/google';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],

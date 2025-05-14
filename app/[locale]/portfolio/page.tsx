@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Playfair_Display } from 'next/font/google';
 import PortfolioCard from '@/components/PortfolioCard';
 import { articleEn, CardData } from '@/localDB/articleEn';
-import { getLocale } from 'next-intl/server';
+import { getLocale, setRequestLocale } from 'next-intl/server';
 import { articleDe } from '@/localDB/articleDe';
 import { articleUk } from '@/localDB/articleUk';
 
@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
 
 const Portfolio = async () => {
   const locale = await getLocale();
+  setRequestLocale(locale);
 
   let portfolioCards: CardData[] = articleEn;
   if (locale === 'de') {

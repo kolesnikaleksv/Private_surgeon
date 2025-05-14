@@ -1,9 +1,10 @@
 import React from 'react';
 import { articleEn } from '@/localDB/articleEn';
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
 import { articleDe } from '@/localDB/articleDe';
 import { articleUk } from '@/localDB/articleUk';
 import PortfolioCard from '@/components/PortfolioCard';
@@ -16,6 +17,7 @@ const PortfolioCase = async ({
   const pc = await getTranslations('PortfolioCase');
   const locale = await getLocale();
   const _id = (await params).id;
+  setRequestLocale(locale);
   const chooseLanguage = () => {
     switch (locale) {
       case 'en':

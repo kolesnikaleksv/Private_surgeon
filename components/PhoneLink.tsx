@@ -1,6 +1,7 @@
 import { Phone } from 'lucide-react';
 import { Prosto_One } from 'next/font/google';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import React from 'react';
 
 const prosto_one = Prosto_One({

@@ -1,12 +1,14 @@
 import { Playfair_Display } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import CarouselBanner from '@/components/CarouselBanner';
 import FeedbackSlider from '@/components/FeedbackSlider';
 import { Button } from '@/components/ui/button';
 import Contacts from '@/app/[locale]/contacts/page';
 import ConsultationBlock from '@/components/ConstultationBlock';
 import TeamSliderBlock from '@/components/TeamSliderBlock';
+import { routing } from '@/i18n/routing';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -14,6 +16,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 const Home = () => {
   const hp = useTranslations('HomePage');
   return (
