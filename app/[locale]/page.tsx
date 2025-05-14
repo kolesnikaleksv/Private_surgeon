@@ -21,6 +21,7 @@ const Home = () => {
       <section
         className={`w-full relative overflow-hidden mb-20 ${playfair.className}`}
       >
+        ___________test
         <CarouselBanner />
       </section>
       <section>

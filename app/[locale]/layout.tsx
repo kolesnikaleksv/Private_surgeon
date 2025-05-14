@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
 import { Toaster } from '@/components/ui/sonner';
 import Footer from '@/components/Footer';
+import { setRequestLocale } from 'next-intl/server';
 
 import '../globals.css';
 
@@ -18,6 +19,10 @@ const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,
@@ -32,10 +37,12 @@ export default async function RootLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
+
   return (
     <html lang={locale}>
       <body className={`min-h-screen flex flex-col ${manrope.className}`}>
-        <NextIntlClientProvider locale={locale}>
+        <NextIntlClientProvider>
           <Navbar />
           <main className="mt-[66px] sm:mt-19 flex-grow font-work-sans">
             {children}
