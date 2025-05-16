@@ -88,18 +88,6 @@ export default function MobileMenuDrawer() {
         ModalProps={{
           keepMounted: true, // Prevents unmounting, avoiding focus issues
         }}
-        sx={{
-          'MuiBackdrop-root': { bgcolor: 'green' },
-          '.css-y7ab46-MuiPaper-root-MuiDrawer-paper': {
-            bgcolor: 'oklch(0.92 0.0239 244.14)',
-            p: 3,
-            display: 'flex',
-            gap: 2.5,
-          },
-          '.css-4bx69l-MuiButtonBase-root-MuiListItemButton-root': {
-            pl: 0,
-          },
-        }}
       >
         <div
           onClick={toggleDrawer(false)}

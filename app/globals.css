@@ -206,6 +206,13 @@
   .swiper-scrollbar-drag {
     @apply !bg-main-gray;
   }
+  /* sideBar-mobile nav menu */
+  .css-y7ab46-MuiPaper-root-MuiDrawer-paper {
+    @apply flex gap-4 p-5 !bg-main;
+  }
+  .css-4bx69l-MuiButtonBase-root-MuiListItemButton-root {
+    @apply pl-0;
+  }
   /* Footer */
   footer {
     .footer-head {
