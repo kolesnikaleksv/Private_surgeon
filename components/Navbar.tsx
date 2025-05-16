@@ -1,14 +1,11 @@
 import React from 'react';
-// import Link from 'next/link';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-// import MobileNav from '@/components/MobileNav';
 import SelectLanguage from '@/components/SelectLanguage';
 import DialogWithForm from '@/components/DialogWithForm';
 import LogoIconBlack from '@/components/icons/LogoIconBlack';
 import PhoneLink from '@/components/PhoneLink';
-// import MobNavbar from '@/components/MobNavbar';
-import TemporaryDrawer from '@/components/Drawer';
+import MobileMenuDrawer from '@/components/MobileNavDrawer';
 
 function Navbar() {
   const t = useTranslations('NavbarLinks');
@@ -34,8 +31,7 @@ function Navbar() {
           <SelectLanguage />
           <PhoneLink className="hidden xl:flex" />
           <DialogWithForm hideForMobile={hideForMobile} />
-          {/* <MobileNav /> */}
-          <TemporaryDrawer />
+          <MobileMenuDrawer />
         </div>
       </div>
     </header>
