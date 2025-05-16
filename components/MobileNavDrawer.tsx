@@ -89,34 +89,40 @@ export default function MobileMenuDrawer() {
           keepMounted: true, // Prevents unmounting, avoiding focus issues
         }}
       >
-        <div
-          onClick={toggleDrawer(false)}
-          className="absolute top-2 right-2 onClick={toggleDrawer(false)}"
-        >
-          <PanelRightClose size={20} />
-        </div>
-        <Link href={'/'}>
-          <LogoIconBlack className="h-10 sm:h-14 mr-10" />
-        </Link>
-        <PhoneLink />
-        <p className="text-[rgb(115_115_115)]">Choose a page</p>
-        <Box sx={{ pt: 2.5 }} role="presentation" onClick={toggleDrawer(false)}>
-          <List className="">
-            {navItems.map((item) => (
-              <ListItem key={item.id} disablePadding>
-                <Link href={item.href}>
-                  <ListItemButton className="flex flex-row gap-4 whitespace-nowrap">
-                    <span>{item.icon}</span>
-                    <ListItemText primary={item.name} />
-                  </ListItemButton>
-                </Link>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
-        <div className="flex flex-1 justify-center items-end pb-4">
-          <div onClick={() => setOpen(false)} className="cursor-pointer">
-            <DialogWithForm hideForMobile={false} />
+        <div className="flex flex-1 flex-col gap-5 p-5 bg-main-header ">
+          <div
+            onClick={toggleDrawer(false)}
+            className="absolute top-2 right-2 onClick={toggleDrawer(false)}"
+          >
+            <PanelRightClose size={20} />
+          </div>
+          <Link href={'/'}>
+            <LogoIconBlack className="h-10 sm:h-14 mr-10" />
+          </Link>
+          <PhoneLink />
+          <p className="text-[rgb(115_115_115)]">Choose a page</p>
+          <Box
+            sx={{ pt: 2.5 }}
+            role="presentation"
+            onClick={toggleDrawer(false)}
+          >
+            <List>
+              {navItems.map((item) => (
+                <ListItem key={item.id} disablePadding className="p-0">
+                  <Link href={item.href}>
+                    <ListItemButton className="flex flex-row gap-4 whitespace-nowrap !pl-0">
+                      <span>{item.icon}</span>
+                      <ListItemText primary={item.name} />
+                    </ListItemButton>
+                  </Link>
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+          <div className="flex flex-1 justify-center items-end pb-4">
+            <div onClick={() => setOpen(false)} className="cursor-pointer">
+              <DialogWithForm hideForMobile={false} />
+            </div>
           </div>
         </div>
       </Drawer>
