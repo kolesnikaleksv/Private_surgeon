@@ -1,6 +1,5 @@
 import React from 'react';
 import LogoIcon from '@/components/icons/LogoIcon';
-// import Link from 'next/link';
 import { Link } from '@/i18n/navigation';
 import { Mail, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';

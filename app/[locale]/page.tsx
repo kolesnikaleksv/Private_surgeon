@@ -1,6 +1,5 @@
 import { Playfair_Display } from 'next/font/google';
 import { useTranslations } from 'next-intl';
-// import Link from 'next/link';
 import { Link } from '@/i18n/navigation';
 import CarouselBanner from '@/components/CarouselBanner';
 import FeedbackSlider from '@/components/FeedbackSlider';
@@ -26,7 +25,6 @@ const Home = () => {
       <section
         className={`w-full relative overflow-hidden mb-20 ${playfair.className}`}
       >
-        ___________test
         <CarouselBanner />
       </section>
       <section>

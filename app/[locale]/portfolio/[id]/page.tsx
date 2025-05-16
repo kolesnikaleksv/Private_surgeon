@@ -1,7 +1,6 @@
 import React from 'react';
 import { articleEn } from '@/localDB/articleEn';
 import Image from 'next/image';
-// import Link from 'next/link';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { getLocale, getTranslations, setRequestLocale } from 'next-intl/server';
@@ -56,7 +55,7 @@ const PortfolioCase = async ({
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex justify-between items-center gap-5">
             <Link
-              href={`/user/${'later'}`}
+              href={card?.avatarImg === '/avatar.png' ? '/drbubnastory' : '#'}
               className="flex flex-col items-start md:flex-row gap-4 md:items-center mb-3"
             >
               <Image
